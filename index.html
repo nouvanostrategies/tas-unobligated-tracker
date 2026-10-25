@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Function 150 TAS Unobligated Balances & Apportionment Tracker</title>
+  <title>Function 150 International Affairs - Individual TAS Tracker</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -13,24 +13,37 @@
     <!-- Header -->
     <header class="flex flex-col md:flex-row md:items-center justify-between pb-6 border-b border-slate-800">
       <div>
-        <h1 class="text-2xl font-bold tracking-tight text-white">Function 150 International Affairs TAS Tracker</h1>
-        <p class="text-slate-400 text-sm mt-1">FY 2026 End-of-Year Unobligated Balances & OMB Apportionment Sync</p>
+        <h1 class="text-2xl font-bold tracking-tight text-white">Function 150 TAS Budget Execution Tracker</h1>
+        <p class="text-slate-400 text-sm mt-1">Individual Account Unobligated Balances & OMB Apportionment Sync (FY 2026)</p>
       </div>
       <div class="mt-4 md:mt-0 text-right">
-        <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-          ● Filtered Set: 51 TAS Symbols
+        <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+          ● 51 Accounts Loaded
         </span>
         <p id="last-updated" class="text-xs text-slate-500 mt-1">Updated: Loading...</p>
       </div>
     </header>
 
-    <!-- Selection & Search Controls Toolbar -->
-    <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-4 flex flex-col md:flex-row gap-4 items-center justify-between">
-      <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-        <!-- Agency Dropdown Filter -->
-        <div>
-          <label class="block text-[10px] uppercase font-semibold text-slate-400 mb-1">Filter by Agency Code</label>
-          <select id="agency-filter" onchange="filterData()" class="bg-slate-900 border border-slate-700 text-xs text-white rounded-lg p-2.5 w-full sm:w-64 focus:ring-cyan-500 focus:border-cyan-500">
+    <!-- Mode Toggle & Single TAS Selection Toolbar -->
+    <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-5 space-y-4">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-700/50 pb-4">
+        <!-- View Mode Switch -->
+        <div class="flex items-center gap-3">
+          <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">View Mode:</span>
+          <div class="bg-slate-900 p-1 rounded-lg border border-slate-700 flex gap-1">
+            <button id="btn-mode-single" onclick="setViewMode('single')" class="px-3 py-1.5 rounded-md text-xs font-semibold bg-cyan-500 text-slate-950 transition">
+              🎯 Individual TAS Focus
+            </button>
+            <button id="btn-mode-multi" onclick="setViewMode('multi')" class="px-3 py-1.5 rounded-md text-xs font-semibold text-slate-400 hover:text-white transition">
+              📊 Aggregated Portfolio
+            </button>
+          </div>
+        </div>
+
+        <!-- Quick Agency Filter -->
+        <div class="flex items-center gap-3">
+          <label class="text-xs font-semibold uppercase tracking-wider text-slate-400">Agency Group:</label>
+          <select id="agency-filter" onchange="onAgencyChange()" class="bg-slate-900 border border-slate-700 text-xs text-white rounded-lg p-2 focus:ring-cyan-500 focus:border-cyan-500">
             <option value="ALL">All Agency Codes (51 TAS)</option>
             <option value="011">011 — Presidential Funds (USADF, INCLE, IMET, FMF, IAF)</option>
             <option value="012">012 — Dept of Agriculture (FFP, McGovern-Dole, PL 480)</option>
@@ -40,241 +53,71 @@
             <option value="084_095">084 & 095 — Peace Corps & MCC</option>
           </select>
         </div>
-
-        <!-- Text Search Filter -->
-        <div class="w-full sm:w-64">
-          <label class="block text-[10px] uppercase font-semibold text-slate-400 mb-1">Search TAS / Account Name</label>
-          <input type="text" id="search-filter" oninput="filterData()" placeholder="e.g. 072-1021 or DA..." class="bg-slate-900 border border-slate-700 text-xs text-white rounded-lg p-2.5 w-full focus:ring-cyan-500 focus:border-cyan-500">
-        </div>
       </div>
 
-      <!-- Selection Quick Actions -->
-      <div class="flex items-center gap-2 w-full md:w-auto justify-end">
-        <button onclick="selectAll(true)" class="px-3 py-2 bg-slate-700 hover:bg-slate-600 text-xs text-slate-200 rounded-lg transition">Select All</button>
-        <button onclick="selectAll(false)" class="px-3 py-2 bg-slate-700 hover:bg-slate-600 text-xs text-slate-200 rounded-lg transition">Clear All</button>
+      <!-- Individual TAS Dropdown Selector -->
+      <div id="single-tas-container" class="space-y-2">
+        <label class="block text-xs font-semibold uppercase tracking-wider text-cyan-400">Select Specific TAS to Inspect:</label>
+        <select id="individual-tas-select" onchange="onSingleTasSelect()" class="bg-slate-900 border border-cyan-500/50 text-sm font-mono text-cyan-300 font-semibold rounded-lg p-3 w-full focus:ring-2 focus:ring-cyan-400">
+        </select>
       </div>
     </div>
 
-    <!-- KPI Summary Cards -->
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-      <div class="bg-slate-800/60 border border-slate-700/50 rounded-xl p-4">
-        <p class="text-xs text-slate-400 uppercase tracking-wider">Displayed / Selected Accounts</p>
-        <p id="kpi-accounts" class="text-2xl font-bold text-white mt-2">--</p>
+    <!-- Individual TAS Header Spotlight Card -->
+    <div id="tas-spotlight-card" class="bg-gradient-to-r from-slate-800 to-slate-800/80 border border-cyan-500/30 rounded-xl p-5 relative overflow-hidden">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <div class="flex items-center gap-2">
+            <span id="spotlight-tas" class="font-mono text-lg font-bold text-cyan-400 bg-cyan-950/80 px-3 py-1 rounded border border-cyan-500/40">---</span>
+            <span id="spotlight-agency" class="text-xs font-semibold px-2.5 py-1 bg-slate-700 rounded text-slate-300">---</span>
+          </div>
+          <h2 id="spotlight-name" class="text-xl font-bold text-white mt-2">Loading Account...</h2>
+          <p id="spotlight-context" class="text-xs text-slate-400 mt-1">---</p>
+        </div>
+        <div class="text-right border-t md:border-t-0 border-slate-700 pt-3 md:pt-0">
+          <span class="text-xs text-slate-400 uppercase tracking-wider block">Total Budgetary Resources</span>
+          <span id="spotlight-total-authority" class="text-2xl font-bold font-mono text-white">$0</span>
+        </div>
       </div>
+    </div>
+
+    <!-- Individual Account KPI Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
       <div class="bg-slate-800/60 border border-slate-700/50 rounded-xl p-4">
         <p class="text-xs text-slate-400 uppercase tracking-wider">Total Unobligated Balance</p>
         <p id="kpi-unobligated" class="text-2xl font-bold text-amber-400 mt-2">$0</p>
+        <p id="kpi-unobs-pct" class="text-[11px] text-slate-500 mt-1">--% of total authority</p>
       </div>
       <div class="bg-slate-800/60 border border-slate-700/50 rounded-xl p-4">
-        <p class="text-xs text-slate-400 uppercase tracking-wider">Apportioned Unobligated</p>
+        <p class="text-xs text-slate-400 uppercase tracking-wider">Apportioned (Available)</p>
         <p id="kpi-apportioned" class="text-2xl font-bold text-emerald-400 mt-2">$0</p>
+        <p id="kpi-app-pct" class="text-[11px] text-slate-500 mt-1">--% of unobligated</p>
       </div>
       <div class="bg-slate-800/60 border border-slate-700/50 rounded-xl p-4">
-        <p class="text-xs text-slate-400 uppercase tracking-wider">OpenOMB Apportionment Feeds</p>
-        <p id="kpi-files" class="text-2xl font-bold text-cyan-400 mt-2">--</p>
+        <p class="text-xs text-slate-400 uppercase tracking-wider">Unapportioned (Pending)</p>
+        <p id="kpi-unapportioned" class="text-2xl font-bold text-orange-400 mt-2">$0</p>
+        <p id="kpi-unapp-pct" class="text-[11px] text-slate-500 mt-1">--% of unobligated</p>
+      </div>
+      <div class="bg-slate-800/60 border border-slate-700/50 rounded-xl p-4">
+        <p class="text-xs text-slate-400 uppercase tracking-wider">Expired Balances</p>
+        <p id="kpi-expired" class="text-2xl font-bold text-rose-400 mt-2">$0</p>
+        <p id="kpi-expired-pct" class="text-[11px] text-slate-500 mt-1">--% of unobligated</p>
       </div>
     </div>
 
-    <!-- Main Chart & Data Table Grid -->
+    <!-- Main Chart & OpenOMB Document Feed Grid -->
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
       <div class="lg:col-span-2 bg-slate-800/60 border border-slate-700/50 rounded-xl p-5">
-        <h2 class="text-base font-semibold text-white mb-4">Unobligated Balances by Selected TAS ($ Millions)</h2>
+        <div class="flex justify-between items-center mb-4">
+          <h2 id="chart-title" class="text-base font-semibold text-white">Account Balance Breakdown</h2>
+          <span id="chart-subtitle" class="text-xs text-cyan-400 font-mono">Individual Composition</span>
+        </div>
         <div class="h-72">
           <canvas id="balanceChart"></canvas>
         </div>
       </div>
+
       <div class="bg-slate-800/60 border border-slate-700/50 rounded-xl p-5 flex flex-col justify-between">
         <div>
-          <h2 class="text-base font-semibold text-white mb-2">OpenOMB Feeds</h2>
-          <p class="text-xs text-slate-400 mb-4">Apportionments matching selected Function 150 accounts.</p>
-          <div id="openomb-list" class="space-y-3 max-h-60 overflow-y-auto text-xs text-slate-300">
-            <p class="text-slate-500">Loading OpenOMB items...</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Detailed Interactive Selection Table -->
-    <div class="bg-slate-800/60 border border-slate-700/50 rounded-xl p-5">
-      <div class="flex justify-between items-center mb-4">
-        <h2 class="text-base font-semibold text-white">Target Function 150 Accounts</h2>
-        <span id="selection-count" class="text-xs text-cyan-400 font-mono">51 of 51 selected</span>
-      </div>
-      <div class="overflow-x-auto max-h-96 overflow-y-auto">
-        <table class="w-full text-left text-xs text-slate-300">
-          <thead class="bg-slate-900/80 text-slate-400 uppercase tracking-wider sticky top-0">
-            <tr>
-              <th class="p-3 w-10 text-center">
-                <input type="checkbox" id="master-checkbox" checked onclick="toggleMasterCheckbox(this)" class="rounded bg-slate-900 border-slate-700 text-cyan-500 focus:ring-0">
-              </th>
-              <th class="p-3">TAS</th>
-              <th class="p-3">Agency / Context</th>
-              <th class="p-3">Account Title</th>
-              <th class="p-3 text-right">Unobligated Balance</th>
-              <th class="p-3 text-right">Apportioned</th>
-              <th class="p-3 text-right">Expired</th>
-            </tr>
-          </thead>
-          <tbody id="table-body" class="divide-y divide-slate-800">
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-  </div>
-
-  <script>
-    let rawMasterData = [];
-    let activeSelectionMap = {};
-    let chartInstance = null;
-
-    async function initDashboard() {
-      try {
-        const res = await fetch('data/dashboard_data.json');
-        const data = await res.json();
-        
-        document.getElementById('last-updated').innerText = `Updated: ${new Date(data.last_updated).toLocaleString()}`;
-        rawMasterData = data.sample_tas_balances || [];
-        
-        // Initialize selection map to include all items
-        rawMasterData.forEach(b => activeSelectionMap[b.tas] = true);
-
-        renderOpenOMBList(data.apportionments || []);
-        filterData();
-      } catch (e) {
-        console.error("Dataset load error:", e);
-      }
-    }
-
-    function filterData() {
-      const agencyVal = document.getElementById('agency-filter').value;
-      const searchVal = document.getElementById('search-filter').value.toLowerCase();
-
-      const filtered = rawMasterData.filter(item => {
-        // Agency filter logic
-        let matchAgency = false;
-        if (agencyVal === 'ALL') matchAgency = true;
-        else if (agencyVal === '084_095') matchAgency = (item.agency_code === '084' || item.agency_code === '095');
-        else matchAgency = (item.agency_code === agencyVal);
-
-        // Search filter logic
-        const matchSearch = item.tas.toLowerCase().includes(searchVal) ||
-                            item.account_name.toLowerCase().includes(searchVal) ||
-                            item.context.toLowerCase().includes(searchVal);
-
-        return matchAgency && matchSearch;
-      });
-
-      renderTable(filtered);
-      updateMetricsAndChart(filtered);
-    }
-
-    function renderTable(items) {
-      const tbody = document.getElementById('table-body');
-      const fmt = num => '$' + (num / 1e6).toFixed(1) + 'M';
-
-      tbody.innerHTML = items.map(b => `
-        <tr class="hover:bg-slate-800/40 ${activeSelectionMap[b.tas] ? '' : 'opacity-40'}">
-          <td class="p-3 text-center">
-            <input type="checkbox" ${activeSelectionMap[b.tas] ? 'checked' : ''} onchange="toggleItemSelection('${b.tas}')" class="rounded bg-slate-900 border-slate-700 text-cyan-500 focus:ring-0">
-          </td>
-          <td class="p-3 font-mono text-cyan-400 font-semibold">${b.tas}</td>
-          <td class="p-3 text-slate-300">
-            <div class="font-medium text-slate-200">${b.agency}</div>
-            <div class="text-[10px] text-slate-400">${b.context}</div>
-          </td>
-          <td class="p-3 font-medium text-white">${b.account_name}</td>
-          <td class="p-3 text-right text-amber-400 font-mono">${fmt(b.unobligated_balance)}</td>
-          <td class="p-3 text-right text-emerald-400 font-mono">${fmt(b.apportioned_unobligated)}</td>
-          <td class="p-3 text-right text-rose-400 font-mono">${fmt(b.expired_unobligated)}</td>
-        </tr>
-      `).join('');
-    }
-
-    function toggleItemSelection(tas) {
-      activeSelectionMap[tas] = !activeSelectionMap[tas];
-      filterData();
-    }
-
-    function toggleMasterCheckbox(master) {
-      selectAll(master.checked);
-    }
-
-    function selectAll(shouldSelect) {
-      const agencyVal = document.getElementById('agency-filter').value;
-      const searchVal = document.getElementById('search-filter').value.toLowerCase();
-
-      rawMasterData.forEach(item => {
-        let matchAgency = (agencyVal === 'ALL') || 
-                          (agencyVal === '084_095' && (item.agency_code === '084' || item.agency_code === '095')) || 
-                          (item.agency_code === agencyVal);
-        let matchSearch = item.tas.toLowerCase().includes(searchVal) || item.account_name.toLowerCase().includes(searchVal);
-        
-        if (matchAgency && matchSearch) {
-          activeSelectionMap[item.tas] = shouldSelect;
-        }
-      });
-      
-      filterData();
-    }
-
-    function updateMetricsAndChart(visibleItems) {
-      const activeItems = visibleItems.filter(b => activeSelectionMap[b.tas]);
-      const fmt = num => '$' + (num / 1e6).toFixed(1) + 'M';
-
-      document.getElementById('kpi-accounts').innerText = `${activeItems.length} selected`;
-      document.getElementById('selection-count').innerText = `${activeItems.length} of ${rawMasterData.length} selected`;
-
-      const totalUnobs = activeItems.reduce((acc, x) => acc + x.unobligated_balance, 0);
-      const totalApp = activeItems.reduce((acc, x) => acc + x.apportioned_unobligated, 0);
-
-      document.getElementById('kpi-unobligated').innerText = fmt(totalUnobs);
-      document.getElementById('kpi-apportioned').innerText = fmt(totalApp);
-
-      // Update Chart
-      const ctx = document.getElementById('balanceChart').getContext('2d');
-      if (chartInstance) chartInstance.destroy();
-
-      const chartData = activeItems.slice(0, 15); // Top 15 visible selection items
-      chartInstance = new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: chartData.map(b => b.tas),
-          datasets: [
-            { label: 'Apportioned ($M)', data: chartData.map(b => b.apportioned_unobligated / 1e6), backgroundColor: '#10b981' },
-            { label: 'Unapportioned ($M)', data: chartData.map(b => b.unapportioned_unobligated / 1e6), backgroundColor: '#f59e0b' },
-            { label: 'Expired ($M)', data: chartData.map(b => b.expired_unobligated / 1e6), backgroundColor: '#f43f5e' }
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          scales: {
-            x: { stacked: true, grid: { color: '#334155' }, ticks: { color: '#94a3b8' } },
-            y: { stacked: true, grid: { color: '#334155' }, ticks: { color: '#94a3b8' } }
-          },
-          plugins: { legend: { labels: { color: '#e2e8f0' } } }
-        }
-      });
-    }
-
-    function renderOpenOMBList(items) {
-      const openombList = document.getElementById('openomb-list');
-      document.getElementById('kpi-files').innerText = items.length;
-
-      if (items.length > 0) {
-        openombList.innerHTML = items.slice(0, 6).map(item => `
-          <div class="p-2.5 bg-slate-900/60 border border-slate-700/40 rounded-lg">
-            <p class="font-medium text-slate-200">${item.title || item.filename || 'Apportionment Document'}</p>
-            <p class="text-[10px] text-slate-500 mt-1">Approved: ${item.approvedDate || 'N/A'}</p>
-          </div>
-        `).join('');
-      } else {
-        openombList.innerHTML = '<p class="text-slate-500">No matching OpenOMB actions found.</p>';
-      }
-    }
-
-    window.onload = initDashboard;
-  </script>
-</body>
-</html>
+          <h2 class="text-base font-semibold text-white mb-2">OpenOMB Feeds for Selected TAS</h2>
+          <p id="openomb-subtitle" class="text-xs text-slate-400
