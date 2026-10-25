@@ -123,26 +123,14 @@
       </div>
     </div>
 
-    <!-- Chart & OpenOMB List -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-      <div class="lg:col-span-2 bg-slate-800/60 border border-slate-700/50 rounded-xl p-5">
-        <div class="flex justify-between items-center mb-4">
-          <h2 id="chart-title" class="text-base font-semibold text-white">Account Balance Breakdown</h2>
-          <span id="chart-subtitle" class="text-xs text-cyan-400 font-mono">Individual Composition</span>
-        </div>
-        <div class="h-72">
-          <canvas id="balanceChart"></canvas>
-        </div>
+    <!-- Full Width Chart -->
+    <div class="bg-slate-800/60 border border-slate-700/50 rounded-xl p-5 w-full">
+      <div class="flex justify-between items-center mb-4">
+        <h2 id="chart-title" class="text-base font-semibold text-white">Account Balance Breakdown</h2>
+        <span id="chart-subtitle" class="text-xs text-cyan-400 font-mono">Individual Composition</span>
       </div>
-
-      <div class="bg-slate-800/60 border border-slate-700/50 rounded-xl p-5 flex flex-col justify-between">
-        <div>
-          <h2 class="text-base font-semibold text-white mb-2">OpenOMB Feeds</h2>
-          <p id="openomb-subtitle" class="text-xs text-slate-400 mb-4">Matching apportionment approval documents.</p>
-          <div id="openomb-list" class="space-y-3 max-h-60 overflow-y-auto text-xs text-slate-300">
-            <p class="text-slate-500">Loading OpenOMB items...</p>
-          </div>
-        </div>
+      <div class="h-72">
+        <canvas id="balanceChart"></canvas>
       </div>
     </div>
 
@@ -314,4 +302,211 @@
       setViewMode('single');
     }
 
-    function render
+    function renderSingleTasView(filteredSet) {
+      const item = filteredSet.find(b => b.tas === currentSingleTas) || filteredSet[0];
+      if (!item) return;
+
+      document.getElementById('spotlight-tas').innerText = item.tas;
+      document.getElementById('spotlight-fy').innerText = `FY ${item.fy}`;
+      document.getElementById('spotlight-agency').innerText = item.agency;
+      document.getElementById('spotlight-name').innerText = item.account_name;
+      document.getElementById('spotlight-context').innerText = item.context;
+      document.getElementById('spotlight-total-authority').innerText = fmt(item.total_budgetary_resources);
+
+      document.getElementById('kpi-unobligated').innerText = fmt(item.unobligated_balance);
+      document.getElementById('kpi-unobs-pct').innerText = `${pct(item.unobligated_balance, item.total_budgetary_resources)} of total authority`;
+
+      document.getElementById('kpi-apportioned').innerText = fmt(item.apportioned_unobligated);
+      document.getElementById('kpi-app-pct').innerText = `${pct(item.apportioned_unobligated, item.unobligated_balance)} of unobligated`;
+
+      document.getElementById('kpi-unapportioned').innerText = fmt(item.unapportioned_unobligated);
+      document.getElementById('kpi-unapp-pct').innerText = `${pct(item.unapportioned_unobligated, item.unobligated_balance)} of unobligated`;
+
+      document.getElementById('kpi-expired').innerText = fmt(item.expired_unobligated);
+      document.getElementById('kpi-expired-pct').innerText = `${pct(item.expired_unobligated, item.unobligated_balance)} of unobligated`;
+
+      document.getElementById('chart-title').innerText = `${item.tas} Unobligated Composition (FY${item.fy})`;
+      document.getElementById('chart-subtitle').innerText = "Individual Account Distribution";
+
+      const ctx = document.getElementById('balanceChart').getContext('2d');
+      if (chartInstance) chartInstance.destroy();
+
+      chartInstance = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: ['Apportioned ($M)', 'Unapportioned ($M)', 'Expired ($M)'],
+          datasets: [{
+            data: [
+              (item.apportioned_unobligated / 1e6).toFixed(1),
+              (item.unapportioned_unobligated / 1e6).toFixed(1),
+              (item.expired_unobligated / 1e6).toFixed(1)
+            ],
+            backgroundColor: ['#10b981', '#f59e0b', '#f43f5e'],
+            borderWidth: 0
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { position: 'bottom', labels: { color: '#e2e8f0' } } }
+        }
+      });
+    }
+
+    function renderMultiTasView(filteredSet) {
+      document.getElementById('spotlight-tas').innerText = "PORTFOLIO";
+      document.getElementById('spotlight-fy').innerText = document.getElementById('fy-filter').value;
+      document.getElementById('spotlight-agency').innerText = "Aggregated View";
+      document.getElementById('spotlight-name').innerText = `${filteredSet.length} Accounts Selected`;
+      document.getElementById('spotlight-context').innerText = "Combined Function 150 Unobligated Summary";
+
+      const totalAuth = filteredSet.reduce((acc, x) => acc + x.total_budgetary_resources, 0);
+      const totalUnobs = filteredSet.reduce((acc, x) => acc + x.unobligated_balance, 0);
+      const totalApp = filteredSet.reduce((acc, x) => acc + x.apportioned_unobligated, 0);
+      const totalUnapp = filteredSet.reduce((acc, x) => acc + x.unapportioned_unobligated, 0);
+      const totalExp = filteredSet.reduce((acc, x) => acc + x.expired_unobligated, 0);
+
+      document.getElementById('spotlight-total-authority').innerText = fmt(totalAuth);
+      document.getElementById('kpi-unobligated').innerText = fmt(totalUnobs);
+      document.getElementById('kpi-unobs-pct').innerText = `${pct(totalUnobs, totalAuth)} of total authority`;
+
+      document.getElementById('kpi-apportioned').innerText = fmt(totalApp);
+      document.getElementById('kpi-app-pct').innerText = `${pct(totalApp, totalUnobs)} of unobligated`;
+
+      document.getElementById('kpi-unapportioned').innerText = fmt(totalUnapp);
+      document.getElementById('kpi-unapp-pct').innerText = `${pct(totalUnapp, totalUnobs)} of unobligated`;
+
+      document.getElementById('kpi-expired').innerText = fmt(totalExp);
+      document.getElementById('kpi-expired-pct').innerText = `${pct(totalExp, totalUnobs)} of unobligated`;
+
+      document.getElementById('chart-title').innerText = "Top Accounts Comparative Breakdown";
+      document.getElementById('chart-subtitle').innerText = "Multi-TAS Comparison ($M)";
+
+      const ctx = document.getElementById('balanceChart').getContext('2d');
+      if (chartInstance) chartInstance.destroy();
+
+      const chartData = filteredSet.slice(0, 12);
+      chartInstance = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: chartData.map(b => b.tas),
+          datasets: [
+            { label: 'Apportioned ($M)', data: chartData.map(b => b.apportioned_unobligated / 1e6), backgroundColor: '#10b981' },
+            { label: 'Unapportioned ($M)', data: chartData.map(b => b.unapportioned_unobligated / 1e6), backgroundColor: '#f59e0b' },
+            { label: 'Expired ($M)', data: chartData.map(b => b.expired_unobligated / 1e6), backgroundColor: '#f43f5e' }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: { stacked: true, grid: { color: '#334155' }, ticks: { color: '#94a3b8' } },
+            y: { stacked: true, grid: { color: '#334155' }, ticks: { color: '#94a3b8' } }
+          },
+          plugins: { legend: { labels: { color: '#e2e8f0' } } }
+        }
+      });
+    }
+
+    function renderTable(items) {
+      const tbody = document.getElementById('table-body');
+      tbody.innerHTML = items.map(b => {
+        const isCurrentSingle = b.tas === currentSingleTas;
+        return `
+          <tr class="hover:bg-slate-800/80 transition cursor-pointer ${isCurrentSingle ? 'bg-cyan-950/40 border-l-4 border-cyan-400' : ''}" onclick="selectIndividualTasFromTable('${b.tas}')">
+            <td class="p-3 text-center">
+              <button class="px-2 py-1 text-[10px] uppercase font-bold rounded ${isCurrentSingle ? 'bg-cyan-500 text-slate-950' : 'bg-slate-700 text-slate-300 hover:bg-slate-600'}">
+                ${isCurrentSingle ? 'Active' : 'Inspect'}
+              </button>
+            </td>
+            <td class="p-3 font-mono text-cyan-400 font-semibold">${b.tas}</td>
+            <td class="p-3 font-mono text-slate-300">FY ${b.fy}</td>
+            <td class="p-3 text-slate-300">
+              <div class="font-medium text-slate-200">${b.agency}</div>
+              <div class="text-[10px] text-slate-400">${b.context}</div>
+            </td>
+            <td class="p-3 font-medium text-white">${b.account_name}</td>
+            <td class="p-3 text-right text-slate-200 font-mono">${fmt(b.total_budgetary_resources)}</td>
+            <td class="p-3 text-right text-amber-400 font-mono">${fmt(b.unobligated_balance)}</td>
+            <td class="p-3 text-right text-emerald-400 font-mono">${fmt(b.apportioned_unobligated)}</td>
+            <td class="p-3 text-right text-rose-400 font-mono">${fmt(b.expired_unobligated)}</td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    // AI Query Integration Functions
+    function checkApiKey() {
+      const savedKey = localStorage.getItem('GEMINI_API_KEY');
+      if (!savedKey) {
+        document.getElementById('api-key-box').classList.remove('hidden');
+      } else {
+        document.getElementById('gemini-api-key').value = savedKey;
+      }
+    }
+
+    function saveApiKey() {
+      const key = document.getElementById('gemini-api-key').value.trim();
+      if (key) {
+        localStorage.setItem('GEMINI_API_KEY', key);
+        document.getElementById('api-key-box').classList.add('hidden');
+        alert('API Key saved successfully!');
+      }
+    }
+
+    function toggleApiKeyInput() {
+      document.getElementById('api-key-box').classList.toggle('hidden');
+    }
+
+    async function askAiAnalyst() {
+      const apiKey = localStorage.getItem('GEMINI_API_KEY');
+      if (!apiKey) {
+        alert("Please set your Gemini API key first by clicking '⚙️ Set API Key'.");
+        document.getElementById('api-key-box').classList.remove('hidden');
+        return;
+      }
+
+      const userQuery = document.getElementById('ai-prompt-input').value.trim();
+      if (!userQuery) return;
+
+      const btn = document.getElementById('btn-ask-ai');
+      const responseBox = document.getElementById('ai-response-box');
+      const responseText = document.getElementById('ai-response-text');
+
+      btn.disabled = true;
+      btn.innerText = "Analyzing...";
+      responseBox.classList.remove('hidden');
+      responseText.innerText = "Analyzing dataset with Gemini...";
+
+      const systemContext = `You are a Federal Budget and Appropriations AI Analyst. Analyze the following Function 150 Treasury Account Symbol dataset:\n\n${JSON.stringify(rawMasterData, null, 2)}\n\nAnswer the user query accurately using exact dollar figures, percentages, and TAS codes where applicable.`;
+
+      try {
+        const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            contents: [
+              { role: 'user', parts: [{ text: systemContext + "\n\nUser Question: " + userQuery }] }
+            ]
+          })
+        });
+
+        const result = await res.json();
+        if (result.candidates && result.candidates[0].content.parts[0].text) {
+          responseText.innerText = result.candidates[0].content.parts[0].text;
+        } else {
+          responseText.innerText = "Error parsing response. Verify your Gemini API key.";
+        }
+      } catch (err) {
+        console.error("AI Query Error:", err);
+        responseText.innerText = "Error connecting to AI service. Check network connection or API key.";
+      } finally {
+        btn.disabled = false;
+        btn.innerText = "Submit Query";
+      }
+    }
+
+    window.onload = initDashboard;
+  </script>
+</body>
+</html>
