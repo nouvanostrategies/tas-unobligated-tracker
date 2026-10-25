@@ -174,6 +174,41 @@
       </div>
     </div>
 
+    <!-- AI Search & Query Section (Bottom of Page) -->
+    <div class="bg-slate-800/90 border border-cyan-500/40 rounded-xl p-6 shadow-xl space-y-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="text-xl">🤖</span>
+          <h2 class="text-base font-bold text-white">Ask AI Analyst</h2>
+          <span class="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-500/30">Gemini Powered</span>
+        </div>
+        <button onclick="toggleApiKeyInput()" class="text-xs text-slate-400 hover:text-cyan-400 transition">⚙️ Set API Key</button>
+      </div>
+
+      <!-- API Key Setting (Hidden after setup) -->
+      <div id="api-key-box" class="bg-slate-900/90 border border-slate-700 rounded-lg p-3 hidden space-y-2">
+        <label class="block text-xs text-slate-300 font-semibold">Google Gemini API Key:</label>
+        <div class="flex gap-2">
+          <input type="password" id="gemini-api-key" placeholder="AIzaSy..." class="bg-slate-800 border border-slate-700 text-xs text-white rounded p-2 flex-1 focus:ring-cyan-500">
+          <button onclick="saveApiKey()" class="px-3 py-2 bg-cyan-500 text-slate-950 text-xs font-bold rounded hover:bg-cyan-400">Save Key</button>
+        </div>
+        <p class="text-[10px] text-slate-500">Your key is stored locally in your browser's local storage and is never saved to GitHub.</p>
+      </div>
+
+      <!-- Search Input & Query Controls -->
+      <div class="flex flex-col sm:flex-row gap-2">
+        <input type="text" id="ai-prompt-input" onkeydown="if(event.key === 'Enter') askAiAnalyst()" placeholder="Ask any question about these 51 accounts (e.g., Which USAID accounts have the highest unobligated balances?)" class="bg-slate-900 border border-slate-700 text-xs text-white rounded-lg p-3 flex-1 focus:ring-cyan-500">
+        <button onclick="askAiAnalyst()" id="btn-ask-ai" class="px-5 py-3 bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-bold rounded-lg transition flex items-center justify-center gap-2">
+          <span>Submit Query</span>
+        </button>
+      </div>
+
+      <!-- Response Display Box -->
+      <div id="ai-response-box" class="hidden bg-slate-900/90 border border-slate-700 rounded-lg p-4 text-xs text-slate-200 space-y-2 leading-relaxed font-sans">
+        <p id="ai-response-text" class="whitespace-pre-line"></p>
+      </div>
+    </div>
+
   </div>
 
   <script>
@@ -195,6 +230,7 @@
         rawMasterData = data.sample_tas_balances || [];
         openombData = data.apportionments || [];
 
+        checkApiKey();
         filterData();
       } catch (e) {
         console.error("Dataset load error:", e);
@@ -278,163 +314,4 @@
       setViewMode('single');
     }
 
-    function renderSingleTasView(filteredSet) {
-      const item = filteredSet.find(b => b.tas === currentSingleTas) || filteredSet[0];
-      if (!item) return;
-
-      document.getElementById('spotlight-tas').innerText = item.tas;
-      document.getElementById('spotlight-fy').innerText = `FY ${item.fy}`;
-      document.getElementById('spotlight-agency').innerText = item.agency;
-      document.getElementById('spotlight-name').innerText = item.account_name;
-      document.getElementById('spotlight-context').innerText = item.context;
-      document.getElementById('spotlight-total-authority').innerText = fmt(item.total_budgetary_resources);
-
-      document.getElementById('kpi-unobligated').innerText = fmt(item.unobligated_balance);
-      document.getElementById('kpi-unobs-pct').innerText = `${pct(item.unobligated_balance, item.total_budgetary_resources)} of total authority`;
-
-      document.getElementById('kpi-apportioned').innerText = fmt(item.apportioned_unobligated);
-      document.getElementById('kpi-app-pct').innerText = `${pct(item.apportioned_unobligated, item.unobligated_balance)} of unobligated`;
-
-      document.getElementById('kpi-unapportioned').innerText = fmt(item.unapportioned_unobligated);
-      document.getElementById('kpi-unapp-pct').innerText = `${pct(item.unapportioned_unobligated, item.unobligated_balance)} of unobligated`;
-
-      document.getElementById('kpi-expired').innerText = fmt(item.expired_unobligated);
-      document.getElementById('kpi-expired-pct').innerText = `${pct(item.expired_unobligated, item.unobligated_balance)} of unobligated`;
-
-      document.getElementById('chart-title').innerText = `${item.tas} Unobligated Composition (FY${item.fy})`;
-      document.getElementById('chart-subtitle').innerText = "Individual Account Distribution";
-
-      const ctx = document.getElementById('balanceChart').getContext('2d');
-      if (chartInstance) chartInstance.destroy();
-
-      chartInstance = new Chart(ctx, {
-        type: 'doughnut',
-        data: {
-          labels: ['Apportioned ($M)', 'Unapportioned ($M)', 'Expired ($M)'],
-          datasets: [{
-            data: [
-              (item.apportioned_unobligated / 1e6).toFixed(1),
-              (item.unapportioned_unobligated / 1e6).toFixed(1),
-              (item.expired_unobligated / 1e6).toFixed(1)
-            ],
-            backgroundColor: ['#10b981', '#f59e0b', '#f43f5e'],
-            borderWidth: 0
-          }]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: { legend: { position: 'bottom', labels: { color: '#e2e8f0' } } }
-        }
-      });
-
-      renderFilteredOpenOMBList([item.tas]);
-    }
-
-    function renderMultiTasView(filteredSet) {
-      document.getElementById('spotlight-tas').innerText = "PORTFOLIO";
-      document.getElementById('spotlight-fy').innerText = document.getElementById('fy-filter').value;
-      document.getElementById('spotlight-agency').innerText = "Aggregated View";
-      document.getElementById('spotlight-name').innerText = `${filteredSet.length} Accounts Selected`;
-      document.getElementById('spotlight-context').innerText = "Combined Function 150 Unobligated Summary";
-
-      const totalAuth = filteredSet.reduce((acc, x) => acc + x.total_budgetary_resources, 0);
-      const totalUnobs = filteredSet.reduce((acc, x) => acc + x.unobligated_balance, 0);
-      const totalApp = filteredSet.reduce((acc, x) => acc + x.apportioned_unobligated, 0);
-      const totalUnapp = filteredSet.reduce((acc, x) => acc + x.unapportioned_unobligated, 0);
-      const totalExp = filteredSet.reduce((acc, x) => acc + x.expired_unobligated, 0);
-
-      document.getElementById('spotlight-total-authority').innerText = fmt(totalAuth);
-      document.getElementById('kpi-unobligated').innerText = fmt(totalUnobs);
-      document.getElementById('kpi-unobs-pct').innerText = `${pct(totalUnobs, totalAuth)} of total authority`;
-
-      document.getElementById('kpi-apportioned').innerText = fmt(totalApp);
-      document.getElementById('kpi-app-pct').innerText = `${pct(totalApp, totalUnobs)} of unobligated`;
-
-      document.getElementById('kpi-unapportioned').innerText = fmt(totalUnapp);
-      document.getElementById('kpi-unapp-pct').innerText = `${pct(totalUnapp, totalUnobs)} of unobligated`;
-
-      document.getElementById('kpi-expired').innerText = fmt(totalExp);
-      document.getElementById('kpi-expired-pct').innerText = `${pct(totalExp, totalUnobs)} of unobligated`;
-
-      document.getElementById('chart-title').innerText = "Top Accounts Comparative Breakdown";
-      document.getElementById('chart-subtitle').innerText = "Multi-TAS Comparison ($M)";
-
-      const ctx = document.getElementById('balanceChart').getContext('2d');
-      if (chartInstance) chartInstance.destroy();
-
-      const chartData = filteredSet.slice(0, 12);
-      chartInstance = new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: chartData.map(b => b.tas),
-          datasets: [
-            { label: 'Apportioned ($M)', data: chartData.map(b => b.apportioned_unobligated / 1e6), backgroundColor: '#10b981' },
-            { label: 'Unapportioned ($M)', data: chartData.map(b => b.unapportioned_unobligated / 1e6), backgroundColor: '#f59e0b' },
-            { label: 'Expired ($M)', data: chartData.map(b => b.expired_unobligated / 1e6), backgroundColor: '#f43f5e' }
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          scales: {
-            x: { stacked: true, grid: { color: '#334155' }, ticks: { color: '#94a3b8' } },
-            y: { stacked: true, grid: { color: '#334155' }, ticks: { color: '#94a3b8' } }
-          },
-          plugins: { legend: { labels: { color: '#e2e8f0' } } }
-        }
-      });
-
-      renderFilteredOpenOMBList(filteredSet.map(b => b.tas));
-    }
-
-    function renderTable(items) {
-      const tbody = document.getElementById('table-body');
-      tbody.innerHTML = items.map(b => {
-        const isCurrentSingle = b.tas === currentSingleTas;
-        return `
-          <tr class="hover:bg-slate-800/80 transition cursor-pointer ${isCurrentSingle ? 'bg-cyan-950/40 border-l-4 border-cyan-400' : ''}" onclick="selectIndividualTasFromTable('${b.tas}')">
-            <td class="p-3 text-center">
-              <button class="px-2 py-1 text-[10px] uppercase font-bold rounded ${isCurrentSingle ? 'bg-cyan-500 text-slate-950' : 'bg-slate-700 text-slate-300 hover:bg-slate-600'}">
-                ${isCurrentSingle ? 'Active' : 'Inspect'}
-              </button>
-            </td>
-            <td class="p-3 font-mono text-cyan-400 font-semibold">${b.tas}</td>
-            <td class="p-3 font-mono text-slate-300">FY ${b.fy}</td>
-            <td class="p-3 text-slate-300">
-              <div class="font-medium text-slate-200">${b.agency}</div>
-              <div class="text-[10px] text-slate-400">${b.context}</div>
-            </td>
-            <td class="p-3 font-medium text-white">${b.account_name}</td>
-            <td class="p-3 text-right text-slate-200 font-mono">${fmt(b.total_budgetary_resources)}</td>
-            <td class="p-3 text-right text-amber-400 font-mono">${fmt(b.unobligated_balance)}</td>
-            <td class="p-3 text-right text-emerald-400 font-mono">${fmt(b.apportioned_unobligated)}</td>
-            <td class="p-3 text-right text-rose-400 font-mono">${fmt(b.expired_unobligated)}</td>
-          </tr>
-        `;
-      }).join('');
-    }
-
-    function renderFilteredOpenOMBList(tasList) {
-      const openombList = document.getElementById('openomb-list');
-      const matchingDocItems = openombData.filter(item => {
-        const title = item.title || item.filename || '';
-        return tasList.some(tas => title.includes(tas));
-      });
-
-      if (matchingDocItems.length > 0) {
-        openombList.innerHTML = matchingDocItems.slice(0, 6).map(item => `
-          <div class="p-2.5 bg-slate-900/60 border border-slate-700/40 rounded-lg">
-            <p class="font-medium text-slate-200">${item.title || item.filename || 'Apportionment Document'}</p>
-            <p class="text-[10px] text-slate-500 mt-1">Approved: ${item.approvedDate || 'N/A'}</p>
-          </div>
-        `).join('');
-      } else {
-        openombList.innerHTML = `<p class="text-slate-500">No OpenOMB records matching selected TAS.</p>`;
-      }
-    }
-
-    window.onload = initDashboard;
-  </script>
-</body>
-</html>
+    function render
