@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TAS Unobligated Balances & Apportionment Tracker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen p-6 font-sans">
+  <div class="max-w-7xl mx-auto space-y-6">
+    
+    <!-- Header -->
+    <header class="flex flex-col md:flex-row md:items-center justify-between pb-6 border-b border-slate-800">
+      <div>
+        <h1 class="text-2xl font-bold tracking-tight text-white">TAS Unobligated Balances & Apportionments</h1>
+        <p class="text-slate-400 text-sm mt-1">Federal Account Budget Execution Tracking (FY 2024–2026)</p>
+      </div>
+      <div class="mt-4 md:mt-0 text-right">
+        <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+          ● Live Sync Active
+        </span>
+        <p id="last-updated" class="text-xs text-slate-500 mt-1">Updated: Loading...</p>
+      </div>
+    </header>
+
+    <!-- KPI Summary Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div class="bg-slate-800/60 border border-slate-700/50 rounded-xl p-4">
+        <p class="text-xs text-slate-400 uppercase tracking-wider">Total Accounts Tracked</p>
+        <p id="kpi-accounts" class="text-2xl font-bold text-white mt-2">--</p>
+      </div>
+      <div class="bg-slate-800/60 border border-slate-700/50 rounded-xl p-4">
+        <p class="text-xs text-slate-400 uppercase tracking-wider">Total Unobligated Balance</p>
+        <p id="kpi-unobligated" class="text-2xl font-bold text-amber-400 mt-2">$0</p>
+      </div>
+      <div class="bg-slate-800/60 border border-slate-700/50 rounded-xl p-4">
+        <p class="text-xs text-slate-400 uppercase tracking-wider">Apportioned Unobligated</p>
+        <p id="kpi-apportioned" class="text-2xl font-bold text-emerald-400 mt-2">$0</p>
+      </div>
+      <div class="bg-slate-800/60 border border-slate-700/50 rounded-xl p-4">
+        <p class="text-xs text-slate-400 uppercase tracking-wider">Recent Apportionment Files</p>
+        <p id="kpi-files" class="text-2xl font-bold text-cyan-400 mt-2">--</p>
+      </div>
+    </div>
+
+    <!-- Main Chart & Data Table Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="lg:col-span-2 bg-slate-800/60 border border-slate-700/50 rounded-xl p-5">
+        <h2 class="text-base font-semibold text-white mb-4">Unobligated Balances by TAS</h2>
+        <div class="h-64">
+          <canvas id="balanceChart"></canvas>
+        </div>
+      </div>
+      <div class="bg-slate-800/60 border border-slate-700/50 rounded-xl p-5 flex flex-col justify-between">
+        <div>
+          <h2 class="text-base font-semibold text-white mb-2">OpenOMB Feeds</h2>
+          <p class="text-xs text-slate-400 mb-4">Latest apportionment document actions pulled from OpenOMB.</p>
+          <div id="openomb-list" class="space-y-3 max-h-56 overflow-y-auto text-xs text-slate-300">
+            <p class="text-slate-500">Loading OpenOMB items...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Detailed Table -->
+    <div class="bg-slate-800/60 border border-slate-700/50 rounded-xl p-5">
+      <h2 class="text-base font-semibold text-white mb-4">Account Breakdown</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs text-slate-300">
+          <thead class="bg-slate-900/50 text-slate-400 uppercase tracking-wider">
+            <tr>
+              <th class="p-3">TAS</th>
+              <th class="p-3">Agency</th>
+              <th class="p-3">Account Name</th>
+              <th class="p-3">FY</th>
+              <th class="p-3 text-right">Unobligated Balance</th>
+              <th class="p-3 text-right">Apportioned</th>
+              <th class="p-3 text-right">Expired</th>
+            </tr>
+          </thead>
+          <tbody id="table-body" class="divide-y divide-slate-800">
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    async function initDashboard() {
+      let data;
+      try {
+        const res = await fetch('data/dashboard_data.json');
+        data = await res.json();
+      } catch (e) {
+        console.warn("Could not load dataset, rendering fallback.");
+        return;
+      }
+
+      document.getElementById('last-updated').innerText = `Updated: ${new Date(data.last_updated).toLocaleString()}`;
+      
+      const balances = data.sample_tas_balances || [];
+      const apportionments = data.apportionments || [];
+
+      document.getElementById('kpi-accounts').innerText = balances.length;
+      document.getElementById('kpi-files').innerText = apportionments.length;
+
+      const totalUnobs = balances.reduce((acc, x) => acc + x.unobligated_balance, 0);
+      const totalApp = balances.reduce((acc, x) => acc + x.apportioned_unobligated, 0);
+
+      const fmt = num => '$' + (num / 1e6).toFixed(1) + 'M';
+      document.getElementById('kpi-unobligated').innerText = fmt(totalUnobs);
+      document.getElementById('kpi-apportioned').innerText = fmt(totalApp);
+
+      const tbody = document.getElementById('table-body');
+      tbody.innerHTML = balances.map(b => `
+        <tr class="hover:bg-slate-800/40">
+          <td class="p-3 font-mono text-cyan-400">${b.tas}</td>
+          <td class="p-3">${b.agency}</td>
+          <td class="p-3 font-medium text-white">${b.account_name}</td>
+          <td class="p-3">${b.fy}</td>
+          <td class="p-3 text-right text-amber-400 font-mono">${fmt(b.unobligated_balance)}</td>
+          <td class="p-3 text-right text-emerald-400 font-mono">${fmt(b.apportioned_unobligated)}</td>
+          <td class="p-3 text-right text-rose-400 font-mono">${fmt(b.expired_unobligated)}</td>
+        </tr>
+      `).join('');
+
+      const openombList = document.getElementById('openomb-list');
+      if (apportionments.length > 0) {
+        openombList.innerHTML = apportionments.slice(0, 5).map(item => `
+          <div class="p-2.5 bg-slate-900/60 border border-slate-700/40 rounded-lg">
+            <p class="font-medium text-slate-200">${item.title || item.filename || 'Apportionment Document'}</p>
+            <p class="text-[10px] text-slate-500 mt-1">Date: ${item.approvedDate || 'N/A'}</p>
+          </div>
+        `).join('');
+      } else {
+        openombList.innerHTML = '<p class="text-slate-500">No recent OpenOMB feed actions found.</p>';
+      }
+
+      const ctx = document.getElementById('balanceChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: balances.map(b => b.tas),
+          datasets: [
+            {
+              label: 'Apportioned ($M)',
+              data: balances.map(b => b.apportioned_unobligated / 1e6),
+              backgroundColor: '#10b981'
+            },
+            {
+              label: 'Unapportioned ($M)',
+              data: balances.map(b => b.unapportioned_unobligated / 1e6),
+              backgroundColor: '#f59e0b'
+            },
+            {
+              label: 'Expired ($M)',
+              data: balances.map(b => b.expired_unobligated / 1e6),
+              backgroundColor: '#f43f5e'
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: { stacked: true, grid: { color: '#334155' }, ticks: { color: '#94a3b8' } },
+            y: { stacked: true, grid: { color: '#334155' }, ticks: { color: '#94a3b8' } }
+          },
+          plugins: {
+            legend: { labels: { color: '#e2e8f0' } }
+          }
+        }
+      });
+    }
+
+    window.onload = initDashboard;
+  </script>
+</body>
+</html>
