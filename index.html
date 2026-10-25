@@ -152,6 +152,7 @@
               <th class="p-3">Account Title</th>
               <th class="p-3 text-right">Total Authority</th>
               <th class="p-3 text-right">Unobligated</th>
+              <th class="p-3 text-right">% Unobligated</th>
               <th class="p-3 text-right">Apportioned</th>
               <th class="p-3 text-right">Expired</th>
             </tr>
@@ -412,6 +413,8 @@
       const tbody = document.getElementById('table-body');
       tbody.innerHTML = items.map(b => {
         const isCurrentSingle = b.tas === currentSingleTas;
+        const unobsPct = pct(b.unobligated_balance, b.total_budgetary_resources);
+
         return `
           <tr class="hover:bg-slate-800/80 transition cursor-pointer ${isCurrentSingle ? 'bg-cyan-950/40 border-l-4 border-cyan-400' : ''}" onclick="selectIndividualTasFromTable('${b.tas}')">
             <td class="p-3 text-center">
@@ -428,6 +431,11 @@
             <td class="p-3 font-medium text-white">${b.account_name}</td>
             <td class="p-3 text-right text-slate-200 font-mono">${fmt(b.total_budgetary_resources)}</td>
             <td class="p-3 text-right text-amber-400 font-mono">${fmt(b.unobligated_balance)}</td>
+            <td class="p-3 text-right font-mono font-semibold">
+              <span class="inline-block px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                ${unobsPct}
+              </span>
+            </td>
             <td class="p-3 text-right text-emerald-400 font-mono">${fmt(b.apportioned_unobligated)}</td>
             <td class="p-3 text-right text-rose-400 font-mono">${fmt(b.expired_unobligated)}</td>
           </tr>
