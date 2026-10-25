@@ -22,4 +22,18 @@ FUNCTION_150_TAS_MASTER = [
 
     # Agency 019 - Department of State
     {"tas": "019-0102", "agency_code": "019", "agency": "Department of State", "account_name": "IBWC: Salaries & Expenses", "context": "International Boundary and Water Commission"},
-    {"tas": "019-0106", "agency_code": "01
+    {"tas": "019-0106", "agency_code": "019", "agency": "Department of State", "account_name": "IBWC: Construction", "context": "International Boundary and Water Commission"},
+    {"tas": "019-0107", "agency_code": "019", "agency": "Department of State", "account_name": "International Fisheries Commissions", "context": "Bureau of Oceans & Environmental Affairs"},
+    {"tas": "019-0108", "agency_code": "019", "agency": "Department of State", "account_name": "Embassy Security, Construction, and Maintenance (ESCM)", "context": "Bureau of Overseas Buildings Operations"},
+    {"tas": "019-0111", "agency_code": "019", "agency": "Department of State", "account_name": "Protection of Foreign Missions and Officials (PFMO)", "context": "Bureau of Diplomatic Security"},
+    {"tas": "019-0112", "agency_code": "019", "agency": "Department of State", "account_name": "Educational and Cultural Exchange Programs (ECA)", "context": "Bureau of Educational and Cultural Affairs"},
+    {"tas": "019-0113", "agency_code": "019", "agency": "Department of State", "account_name": "Diplomatic and Consular Programs (D&CP)", "context": "Core State Dept Operations"},
+    {"tas": "019-0114", "agency_code": "019", "agency": "Department of State", "account_name": "Office of Inspector General (State OIG)", "context": "Independent State Dept Oversight"},
+    {"tas": "019-0522", "agency_code": "019", "agency": "Department of State", "account_name": "Contributions to International Organizations (CIO)", "context": "Bureau of International Organization Affairs"},
+    {"tas": "019-0523", "agency_code": "019", "agency": "Department of State", "account_name": "Contributions for International Peacekeeping Activities (CIPA)", "context": "Bureau of International Organization Affairs"},
+    {"tas": "019-0601", "agency_code": "019", "agency": "Department of State", "account_name": "Repatriation Loans Program Account", "context": "Bureau of Consular Affairs"},
+    {"tas": "019-0820", "agency_code": "019", "agency": "Department of State", "account_name": "Buying Power Maintenance Account", "context": "Foreign Exchange Rate Fluctuations"},
+    {"tas": "019-1030", "agency_code": "019", "agency": "Department of State", "account_name": "Global Health Programs (GHP - State)", "context": "Office of PEPFAR Coordinator"},
+    {"tas": "019-1082", "agency_code": "019", "agency": "Department of State", "account_name": "Nonproliferation, Anti-terrorism, Demining and Related (NADR)", "context": "ISN, CT, and PM Bureaus"},
+    {"tas": "019-1085", "agency_code": "019", "agency": "Department of State", "account_name": "Peacekeeping Operations (PKO)", "context": "Bureau of Political-Military Affairs"},
+    {"tas": "019-1121", "agency_code": "019", "agency": "Department of State", "account
