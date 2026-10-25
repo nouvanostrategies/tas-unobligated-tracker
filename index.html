@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Function 150 International Affairs - Individual TAS Tracker</title>
+  <title>Function 150 International Affairs - TAS Unobligated Tracker</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -14,19 +14,21 @@
     <header class="flex flex-col md:flex-row md:items-center justify-between pb-6 border-b border-slate-800">
       <div>
         <h1 class="text-2xl font-bold tracking-tight text-white">Function 150 TAS Budget Execution Tracker</h1>
-        <p class="text-slate-400 text-sm mt-1">Individual Account Unobligated Balances & OMB Apportionment Sync (FY 2026)</p>
+        <p class="text-slate-400 text-sm mt-1">Individual Account Unobligated Balances & OMB Apportionment Sync (FY 2024–2027)</p>
       </div>
       <div class="mt-4 md:mt-0 text-right">
         <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
-          ● 51 Accounts Loaded
+          ● Multi-Year Sync Active
         </span>
         <p id="last-updated" class="text-xs text-slate-500 mt-1">Updated: Loading...</p>
       </div>
     </header>
 
-    <!-- Toolbar -->
+    <!-- Toolbar Filters -->
     <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-5 space-y-4">
       <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-700/50 pb-4">
+        
+        <!-- View Mode Buttons -->
         <div class="flex items-center gap-3">
           <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">View Mode:</span>
           <div class="bg-slate-900 p-1 rounded-lg border border-slate-700 flex gap-1">
@@ -39,20 +41,38 @@
           </div>
         </div>
 
-        <div class="flex items-center gap-3">
-          <label class="text-xs font-semibold uppercase tracking-wider text-slate-400">Agency Group:</label>
-          <select id="agency-filter" onchange="onAgencyChange()" class="bg-slate-900 border border-slate-700 text-xs text-white rounded-lg p-2 focus:ring-cyan-500 focus:border-cyan-500">
-            <option value="ALL">All Agency Codes (51 TAS)</option>
-            <option value="011">011 — Presidential Funds (USADF, INCLE, IMET, FMF, IAF)</option>
-            <option value="012">012 — Dept of Agriculture (FFP, McGovern-Dole, PL 480)</option>
-            <option value="019">019 — Department of State (D&CP, GHP, MRA, ESCM...)</option>
-            <option value="071">071 — Development Finance Corporation (DFC)</option>
-            <option value="072">072 — USAID (DA, ESF, IDA, GHP, OE, CCF, TI...)</option>
-            <option value="084_095">084 & 095 — Peace Corps & MCC</option>
-          </select>
+        <!-- Filters: FY & Agency -->
+        <div class="flex flex-col sm:flex-row items-center gap-3 w-full lg:w-auto">
+          <!-- Fiscal Year Selector -->
+          <div class="w-full sm:w-36">
+            <label class="block text-[10px] uppercase font-semibold text-slate-400 mb-1">Fiscal Year</label>
+            <select id="fy-filter" onchange="filterData()" class="bg-slate-900 border border-slate-700 text-xs text-white rounded-lg p-2.5 w-full focus:ring-cyan-500 focus:border-cyan-500">
+              <option value="2026" selected>FY 2026</option>
+              <option value="2027">FY 2027</option>
+              <option value="2025">FY 2025</option>
+              <option value="2024">FY 2024</option>
+              <option value="ALL">All FYs (2024–2027)</option>
+            </select>
+          </div>
+
+          <!-- Agency Dropdown -->
+          <div class="w-full sm:w-64">
+            <label class="block text-[10px] uppercase font-semibold text-slate-400 mb-1">Agency Group</label>
+            <select id="agency-filter" onchange="filterData()" class="bg-slate-900 border border-slate-700 text-xs text-white rounded-lg p-2.5 w-full focus:ring-cyan-500 focus:border-cyan-500">
+              <option value="ALL">All Agency Codes (51 TAS)</option>
+              <option value="011">011 — Presidential Funds (USADF, INCLE, IMET, FMF, IAF)</option>
+              <option value="012">012 — Dept of Agriculture (FFP, McGovern-Dole, PL 480)</option>
+              <option value="019">019 — Department of State (D&CP, GHP, MRA, ESCM...)</option>
+              <option value="071">071 — Development Finance Corporation (DFC)</option>
+              <option value="072">072 — USAID (DA, ESF, IDA, GHP, OE, CCF, TI...)</option>
+              <option value="084_095">084 & 095 — Peace Corps & MCC</option>
+            </select>
+          </div>
         </div>
+
       </div>
 
+      <!-- Individual TAS Focus Dropdown -->
       <div id="single-tas-container" class="space-y-2">
         <label class="block text-xs font-semibold uppercase tracking-wider text-cyan-400">Select Specific TAS to Inspect:</label>
         <select id="individual-tas-select" onchange="onSingleTasSelect()" class="bg-slate-900 border border-cyan-500/50 text-sm font-mono text-cyan-300 font-semibold rounded-lg p-3 w-full focus:ring-2 focus:ring-cyan-400">
@@ -66,6 +86,7 @@
         <div>
           <div class="flex items-center gap-2">
             <span id="spotlight-tas" class="font-mono text-lg font-bold text-cyan-400 bg-cyan-950/80 px-3 py-1 rounded border border-cyan-500/40">---</span>
+            <span id="spotlight-fy" class="text-xs font-bold font-mono px-2 py-1 bg-cyan-900/60 text-cyan-300 rounded">FY ----</span>
             <span id="spotlight-agency" class="text-xs font-semibold px-2.5 py-1 bg-slate-700 rounded text-slate-300">---</span>
           </div>
           <h2 id="spotlight-name" class="text-xl font-bold text-white mt-2">Loading Account...</h2>
@@ -102,7 +123,7 @@
       </div>
     </div>
 
-    <!-- Chart & Feed -->
+    <!-- Chart & OpenOMB List -->
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
       <div class="lg:col-span-2 bg-slate-800/60 border border-slate-700/50 rounded-xl p-5">
         <div class="flex justify-between items-center mb-4">
@@ -125,11 +146,11 @@
       </div>
     </div>
 
-    <!-- Master Table -->
+    <!-- Directory Table -->
     <div class="bg-slate-800/60 border border-slate-700/50 rounded-xl p-5">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
         <h2 class="text-base font-semibold text-white">Function 150 Account Directory</h2>
-        <input type="text" id="search-filter" oninput="onSearchInput()" placeholder="Search TAS or title..." class="bg-slate-900 border border-slate-700 text-xs text-white rounded-lg p-2 w-64 focus:ring-cyan-500">
+        <input type="text" id="search-filter" oninput="filterData()" placeholder="Search TAS or title..." class="bg-slate-900 border border-slate-700 text-xs text-white rounded-lg p-2 w-64 focus:ring-cyan-500">
       </div>
       
       <div class="overflow-x-auto max-h-96 overflow-y-auto">
@@ -138,6 +159,7 @@
             <tr>
               <th class="p-3">Select</th>
               <th class="p-3">TAS</th>
+              <th class="p-3">FY</th>
               <th class="p-3">Agency / Context</th>
               <th class="p-3">Account Title</th>
               <th class="p-3 text-right">Total Authority</th>
@@ -159,7 +181,6 @@
     let openombData = [];
     let viewMode = 'single';
     let currentSingleTas = '';
-    let multiSelectionMap = {};
     let chartInstance = null;
 
     const fmt = num => '$' + (num / 1e6).toFixed(1) + 'M';
@@ -174,25 +195,10 @@
         rawMasterData = data.sample_tas_balances || [];
         openombData = data.apportionments || [];
 
-        if (rawMasterData.length > 0) {
-          currentSingleTas = rawMasterData[0].tas;
-          rawMasterData.forEach(b => multiSelectionMap[b.tas] = true);
-        }
-
-        populateTasDropdown(rawMasterData);
-        updateDashboardView();
+        filterData();
       } catch (e) {
         console.error("Dataset load error:", e);
       }
-    }
-
-    function populateTasDropdown(items) {
-      const select = document.getElementById('individual-tas-select');
-      select.innerHTML = items.map(b => `
-        <option value="${b.tas}" ${b.tas === currentSingleTas ? 'selected' : ''}>
-          ${b.tas} — ${b.account_name} (${b.agency})
-        </option>
-      `).join('');
     }
 
     function setViewMode(mode) {
@@ -210,67 +216,74 @@
         document.getElementById('single-tas-container').classList.add('hidden');
       }
 
-      updateDashboardView();
+      filterData();
     }
 
-    function onAgencyChange() {
+    function filterData() {
+      const fyVal = document.getElementById('fy-filter').value;
       const agencyVal = document.getElementById('agency-filter').value;
+      const searchVal = document.getElementById('search-filter').value.toLowerCase();
+
       const filtered = rawMasterData.filter(item => {
-        if (agencyVal === 'ALL') return true;
-        if (agencyVal === '084_095') return item.agency_code === '084' || item.agency_code === '095';
-        return item.agency_code === agencyVal;
+        const matchFy = (fyVal === 'ALL') || (item.fy === fyVal);
+
+        let matchAgency = false;
+        if (agencyVal === 'ALL') matchAgency = true;
+        else if (agencyVal === '084_095') matchAgency = (item.agency_code === '084' || item.agency_code === '095');
+        else matchAgency = (item.agency_code === agencyVal);
+
+        const matchSearch = item.tas.toLowerCase().includes(searchVal) ||
+                            item.account_name.toLowerCase().includes(searchVal) ||
+                            item.context.toLowerCase().includes(searchVal);
+
+        return matchFy && matchAgency && matchSearch;
       });
 
       populateTasDropdown(filtered);
+      renderTable(filtered);
+
       if (filtered.length > 0) {
-        currentSingleTas = filtered[0].tas;
+        const exists = filtered.some(b => b.tas === currentSingleTas);
+        if (!exists) currentSingleTas = filtered[0].tas;
       }
-      updateDashboardView();
+
+      if (viewMode === 'single') {
+        renderSingleTasView(filtered);
+      } else {
+        renderMultiTasView(filtered);
+      }
+    }
+
+    function populateTasDropdown(items) {
+      const select = document.getElementById('individual-tas-select');
+      if (items.length === 0) {
+        select.innerHTML = '<option value="">No matching TAS accounts found</option>';
+        return;
+      }
+
+      select.innerHTML = items.map(b => `
+        <option value="${b.tas}" ${b.tas === currentSingleTas ? 'selected' : ''}>
+          ${b.tas} (FY${b.fy}) — ${b.account_name} [${b.agency}]
+        </option>
+      `).join('');
     }
 
     function onSingleTasSelect() {
       currentSingleTas = document.getElementById('individual-tas-select').value;
-      updateDashboardView();
+      filterData();
     }
 
     function selectIndividualTasFromTable(tas) {
       currentSingleTas = tas;
-      document.getElementById('individual-tas-select').value = tas;
       setViewMode('single');
     }
 
-    function onSearchInput() {
-      updateDashboardView();
-    }
-
-    function updateDashboardView() {
-      const agencyVal = document.getElementById('agency-filter').value;
-      const searchVal = document.getElementById('search-filter').value.toLowerCase();
-
-      const visibleItems = rawMasterData.filter(item => {
-        const matchAgency = (agencyVal === 'ALL') || 
-                          (agencyVal === '084_095' && (item.agency_code === '084' || item.agency_code === '095')) || 
-                          (item.agency_code === agencyVal);
-        const matchSearch = item.tas.toLowerCase().includes(searchVal) || 
-                          item.account_name.toLowerCase().includes(searchVal) || 
-                          item.context.toLowerCase().includes(searchVal);
-        return matchAgency && matchSearch;
-      });
-
-      renderTable(visibleItems);
-
-      if (viewMode === 'single') {
-        renderSingleTasView();
-      } else {
-        renderMultiTasView(visibleItems);
-      }
-    }
-
-    function renderSingleTasView() {
-      const item = rawMasterData.find(b => b.tas === currentSingleTas) || rawMasterData[0];
+    function renderSingleTasView(filteredSet) {
+      const item = filteredSet.find(b => b.tas === currentSingleTas) || filteredSet[0];
       if (!item) return;
 
       document.getElementById('spotlight-tas').innerText = item.tas;
+      document.getElementById('spotlight-fy').innerText = `FY ${item.fy}`;
       document.getElementById('spotlight-agency').innerText = item.agency;
       document.getElementById('spotlight-name').innerText = item.account_name;
       document.getElementById('spotlight-context').innerText = item.context;
@@ -288,7 +301,7 @@
       document.getElementById('kpi-expired').innerText = fmt(item.expired_unobligated);
       document.getElementById('kpi-expired-pct').innerText = `${pct(item.expired_unobligated, item.unobligated_balance)} of unobligated`;
 
-      document.getElementById('chart-title').innerText = `${item.tas} Unobligated Composition`;
+      document.getElementById('chart-title').innerText = `${item.tas} Unobligated Composition (FY${item.fy})`;
       document.getElementById('chart-subtitle').innerText = "Individual Account Distribution";
 
       const ctx = document.getElementById('balanceChart').getContext('2d');
@@ -318,19 +331,18 @@
       renderFilteredOpenOMBList([item.tas]);
     }
 
-    function renderMultiTasView(visibleItems) {
-      const selectedItems = visibleItems.filter(b => multiSelectionMap[b.tas]);
-
+    function renderMultiTasView(filteredSet) {
       document.getElementById('spotlight-tas').innerText = "PORTFOLIO";
+      document.getElementById('spotlight-fy').innerText = document.getElementById('fy-filter').value;
       document.getElementById('spotlight-agency').innerText = "Aggregated View";
-      document.getElementById('spotlight-name').innerText = `${selectedItems.length} Selected Accounts`;
+      document.getElementById('spotlight-name').innerText = `${filteredSet.length} Accounts Selected`;
       document.getElementById('spotlight-context').innerText = "Combined Function 150 Unobligated Summary";
 
-      const totalAuth = selectedItems.reduce((acc, x) => acc + x.total_budgetary_resources, 0);
-      const totalUnobs = selectedItems.reduce((acc, x) => acc + x.unobligated_balance, 0);
-      const totalApp = selectedItems.reduce((acc, x) => acc + x.apportioned_unobligated, 0);
-      const totalUnapp = selectedItems.reduce((acc, x) => acc + x.unapportioned_unobligated, 0);
-      const totalExp = selectedItems.reduce((acc, x) => acc + x.expired_unobligated, 0);
+      const totalAuth = filteredSet.reduce((acc, x) => acc + x.total_budgetary_resources, 0);
+      const totalUnobs = filteredSet.reduce((acc, x) => acc + x.unobligated_balance, 0);
+      const totalApp = filteredSet.reduce((acc, x) => acc + x.apportioned_unobligated, 0);
+      const totalUnapp = filteredSet.reduce((acc, x) => acc + x.unapportioned_unobligated, 0);
+      const totalExp = filteredSet.reduce((acc, x) => acc + x.expired_unobligated, 0);
 
       document.getElementById('spotlight-total-authority').innerText = fmt(totalAuth);
       document.getElementById('kpi-unobligated').innerText = fmt(totalUnobs);
@@ -351,7 +363,7 @@
       const ctx = document.getElementById('balanceChart').getContext('2d');
       if (chartInstance) chartInstance.destroy();
 
-      const chartData = selectedItems.slice(0, 12);
+      const chartData = filteredSet.slice(0, 12);
       chartInstance = new Chart(ctx, {
         type: 'bar',
         data: {
@@ -373,7 +385,7 @@
         }
       });
 
-      renderFilteredOpenOMBList(selectedItems.map(b => b.tas));
+      renderFilteredOpenOMBList(filteredSet.map(b => b.tas));
     }
 
     function renderTable(items) {
@@ -388,6 +400,7 @@
               </button>
             </td>
             <td class="p-3 font-mono text-cyan-400 font-semibold">${b.tas}</td>
+            <td class="p-3 font-mono text-slate-300">FY ${b.fy}</td>
             <td class="p-3 text-slate-300">
               <div class="font-medium text-slate-200">${b.agency}</div>
               <div class="text-[10px] text-slate-400">${b.context}</div>
