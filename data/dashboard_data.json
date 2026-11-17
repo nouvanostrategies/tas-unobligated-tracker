@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-16T14:31:55.775687Z",
+  "last_updated": "2026-11-17T15:23:03.933841Z",
   "apportionments": [],
   "sample_tas_balances": [
     {
@@ -10,10 +10,10 @@
       "context": "USADF (Independent Agency)",
       "fy": "2024",
       "total_budgetary_resources": 45000000,
-      "unobligated_balance": 5400000,
-      "apportioned_unobligated": 4212000,
-      "unapportioned_unobligated": 864000,
-      "expired_unobligated": 324000,
+      "unobligated_balance": 5850000,
+      "apportioned_unobligated": 4563000,
+      "unapportioned_unobligated": 936000,
+      "expired_unobligated": 351000,
       "status": "Active"
     },
     {
@@ -24,10 +24,10 @@
       "context": "USADF (Independent Agency)",
       "fy": "2025",
       "total_budgetary_resources": 46575000,
-      "unobligated_balance": 6520500,
-      "apportioned_unobligated": 5085990,
-      "unapportioned_unobligated": 1043280,
-      "expired_unobligated": 391230,
+      "unobligated_balance": 5123250,
+      "apportioned_unobligated": 3996135,
+      "unapportioned_unobligated": 819720,
+      "expired_unobligated": 307395,
       "status": "Active"
     },
     {
@@ -38,10 +38,10 @@
       "context": "USADF (Independent Agency)",
       "fy": "2026",
       "total_budgetary_resources": 48150000,
-      "unobligated_balance": 7222500,
-      "apportioned_unobligated": 5633550,
-      "unapportioned_unobligated": 1155600,
-      "expired_unobligated": 433350,
+      "unobligated_balance": 4815000,
+      "apportioned_unobligated": 3755700,
+      "unapportioned_unobligated": 770400,
+      "expired_unobligated": 288900,
       "status": "Active"
     },
     {
@@ -52,10 +52,10 @@
       "context": "USADF (Independent Agency)",
       "fy": "2027",
       "total_budgetary_resources": 49725000,
-      "unobligated_balance": 3480750,
-      "apportioned_unobligated": 2714985,
-      "unapportioned_unobligated": 556920,
-      "expired_unobligated": 208845,
+      "unobligated_balance": 7956000,
+      "apportioned_unobligated": 6205680,
+      "unapportioned_unobligated": 1272960,
+      "expired_unobligated": 477360,
       "status": "Active"
     },
     {
@@ -66,10 +66,10 @@
       "context": "State Dept (INL)",
       "fy": "2024",
       "total_budgetary_resources": 1420000000,
-      "unobligated_balance": 142000000,
-      "apportioned_unobligated": 110760000,
-      "unapportioned_unobligated": 22720000,
-      "expired_unobligated": 8520000,
+      "unobligated_balance": 184600000,
+      "apportioned_unobligated": 143988000,
+      "unapportioned_unobligated": 29536000,
+      "expired_unobligated": 11076000,
       "status": "Active"
     },
     {
@@ -80,10 +80,10 @@
       "context": "State Dept (INL)",
       "fy": "2025",
       "total_budgetary_resources": 1469700000,
-      "unobligated_balance": 205758000,
-      "apportioned_unobligated": 160491240,
-      "unapportioned_unobligated": 32921280,
-      "expired_unobligated": 12345480,
+      "unobligated_balance": 191061000,
+      "apportioned_unobligated": 149027580,
+      "unapportioned_unobligated": 30569760,
+      "expired_unobligated": 11463660,
       "status": "Active"
     },
     {
@@ -94,10 +94,10 @@
       "context": "State Dept (INL)",
       "fy": "2026",
       "total_budgetary_resources": 1519400000,
-      "unobligated_balance": 197522000,
-      "apportioned_unobligated": 154067160,
-      "unapportioned_unobligated": 31603520,
-      "expired_unobligated": 11851320,
+      "unobligated_balance": 182328000,
+      "apportioned_unobligated": 142215840,
+      "unapportioned_unobligated": 29172480,
+      "expired_unobligated": 10939680,
       "status": "Active"
     },
     {
@@ -108,10 +108,10 @@
       "context": "State Dept (INL)",
       "fy": "2027",
       "total_budgetary_resources": 1569100000,
-      "unobligated_balance": 172601000,
-      "apportioned_unobligated": 134628780,
-      "unapportioned_unobligated": 27616160,
-      "expired_unobligated": 10356060,
+      "unobligated_balance": 203983000,
+      "apportioned_unobligated": 159106740,
+      "unapportioned_unobligated": 32637280,
+      "expired_unobligated": 12238980,
       "status": "Active"
     },
     {
@@ -122,10 +122,10 @@
       "context": "Policy: State / Exec: DoD",
       "fy": "2024",
       "total_budgetary_resources": 112000000,
-      "unobligated_balance": 17920000,
-      "apportioned_unobligated": 13977600,
-      "unapportioned_unobligated": 2867200,
-      "expired_unobligated": 1075200,
+      "unobligated_balance": 10080000,
+      "apportioned_unobligated": 7862400,
+      "unapportioned_unobligated": 1612800,
+      "expired_unobligated": 604800,
       "status": "Active"
     },
     {
@@ -136,10 +136,10 @@
       "context": "Policy: State / Exec: DoD",
       "fy": "2025",
       "total_budgetary_resources": 115919999,
-      "unobligated_balance": 18547199,
-      "apportioned_unobligated": 14466815,
-      "unapportioned_unobligated": 2967551,
-      "expired_unobligated": 1112833,
+      "unobligated_balance": 16228799,
+      "apportioned_unobligated": 12658463,
+      "unapportioned_unobligated": 2596607,
+      "expired_unobligated": 973729,
       "status": "Active"
     },
     {
@@ -164,10 +164,10 @@
       "context": "Policy: State / Exec: DoD",
       "fy": "2027",
       "total_budgetary_resources": 123760000,
-      "unobligated_balance": 19801600,
-      "apportioned_unobligated": 15445248,
-      "unapportioned_unobligated": 3168256,
-      "expired_unobligated": 1188096,
+      "unobligated_balance": 17326400,
+      "apportioned_unobligated": 13514592,
+      "unapportioned_unobligated": 2772224,
+      "expired_unobligated": 1039584,
       "status": "Active"
     },
     {
@@ -192,10 +192,10 @@
       "context": "Policy: State / Exec: DoD",
       "fy": "2025",
       "total_budgetary_resources": 6313499999,
-      "unobligated_balance": 947024999,
-      "apportioned_unobligated": 738679499,
-      "unapportioned_unobligated": 151523999,
-      "expired_unobligated": 56821501,
+      "unobligated_balance": 441944999,
+      "apportioned_unobligated": 344717099,
+      "unapportioned_unobligated": 70711199,
+      "expired_unobligated": 26516701,
       "status": "Active"
     },
     {
@@ -206,10 +206,10 @@
       "context": "Policy: State / Exec: DoD",
       "fy": "2026",
       "total_budgetary_resources": 6527000000,
-      "unobligated_balance": 913780000,
-      "apportioned_unobligated": 712748400,
-      "unapportioned_unobligated": 146204800,
-      "expired_unobligated": 54826800,
+      "unobligated_balance": 456890000,
+      "apportioned_unobligated": 356374200,
+      "unapportioned_unobligated": 73102400,
+      "expired_unobligated": 27413400,
       "status": "Active"
     },
     {
@@ -220,10 +220,10 @@
       "context": "Policy: State / Exec: DoD",
       "fy": "2027",
       "total_budgetary_resources": 6740500000,
-      "unobligated_balance": 606645000,
-      "apportioned_unobligated": 473183100,
-      "unapportioned_unobligated": 97063200,
-      "expired_unobligated": 36398700,
+      "unobligated_balance": 674050000,
+      "apportioned_unobligated": 525759000,
+      "unapportioned_unobligated": 107848000,
+      "expired_unobligated": 40443000,
       "status": "Active"
     },
     {
@@ -234,10 +234,10 @@
       "context": "IAF (Independent Agency)",
       "fy": "2024",
       "total_budgetary_resources": 48000000,
-      "unobligated_balance": 7680000,
-      "apportioned_unobligated": 5990400,
-      "unapportioned_unobligated": 1228800,
-      "expired_unobligated": 460800,
+      "unobligated_balance": 7200000,
+      "apportioned_unobligated": 5616000,
+      "unapportioned_unobligated": 1152000,
+      "expired_unobligated": 432000,
       "status": "Active"
     },
     {
@@ -248,10 +248,10 @@
       "context": "IAF (Independent Agency)",
       "fy": "2025",
       "total_budgetary_resources": 49679999,
-      "unobligated_balance": 5961599,
-      "apportioned_unobligated": 4650047,
-      "unapportioned_unobligated": 953855,
-      "expired_unobligated": 357697,
+      "unobligated_balance": 3974399,
+      "apportioned_unobligated": 3100031,
+      "unapportioned_unobligated": 635903,
+      "expired_unobligated": 238465,
       "status": "Active"
     },
     {
@@ -262,10 +262,10 @@
       "context": "IAF (Independent Agency)",
       "fy": "2026",
       "total_budgetary_resources": 51360000,
-      "unobligated_balance": 4108800,
-      "apportioned_unobligated": 3204864,
-      "unapportioned_unobligated": 657408,
-      "expired_unobligated": 246528,
+      "unobligated_balance": 5649600,
+      "apportioned_unobligated": 4406688,
+      "unapportioned_unobligated": 903936,
+      "expired_unobligated": 338976,
       "status": "Active"
     },
     {
@@ -276,10 +276,10 @@
       "context": "IAF (Independent Agency)",
       "fy": "2027",
       "total_budgetary_resources": 53040000,
-      "unobligated_balance": 7956000,
-      "apportioned_unobligated": 6205680,
-      "unapportioned_unobligated": 1272960,
-      "expired_unobligated": 477360,
+      "unobligated_balance": 7425600,
+      "apportioned_unobligated": 5791968,
+      "unapportioned_unobligated": 1188096,
+      "expired_unobligated": 445536,
       "status": "Active"
     },
     {
@@ -290,10 +290,10 @@
       "context": "USDA / Joint with USAID BHA",
       "fy": "2024",
       "total_budgetary_resources": 1750000000,
-      "unobligated_balance": 280000000,
-      "apportioned_unobligated": 218400000,
-      "unapportioned_unobligated": 44800000,
-      "expired_unobligated": 16800000,
+      "unobligated_balance": 192500000,
+      "apportioned_unobligated": 150150000,
+      "unapportioned_unobligated": 30800000,
+      "expired_unobligated": 11550000,
       "status": "Active"
     },
     {
@@ -304,10 +304,10 @@
       "context": "USDA / Joint with USAID BHA",
       "fy": "2025",
       "total_budgetary_resources": 1811249999,
-      "unobligated_balance": 217349999,
-      "apportioned_unobligated": 169532999,
-      "unapportioned_unobligated": 34775999,
-      "expired_unobligated": 13041001,
+      "unobligated_balance": 126787499,
+      "apportioned_unobligated": 98894249,
+      "unapportioned_unobligated": 20285999,
+      "expired_unobligated": 7607251,
       "status": "Active"
     },
     {
@@ -318,10 +318,10 @@
       "context": "USDA / Joint with USAID BHA",
       "fy": "2026",
       "total_budgetary_resources": 1872500000,
-      "unobligated_balance": 131075000,
-      "apportioned_unobligated": 102238500,
-      "unapportioned_unobligated": 20972000,
-      "expired_unobligated": 7864500,
+      "unobligated_balance": 299600000,
+      "apportioned_unobligated": 233688000,
+      "unapportioned_unobligated": 47936000,
+      "expired_unobligated": 17976000,
       "status": "Active"
     },
     {
@@ -332,10 +332,10 @@
       "context": "USDA / Joint with USAID BHA",
       "fy": "2027",
       "total_budgetary_resources": 1933750000,
-      "unobligated_balance": 135362500,
-      "apportioned_unobligated": 105582750,
-      "unapportioned_unobligated": 21658000,
-      "expired_unobligated": 8121750,
+      "unobligated_balance": 154700000,
+      "apportioned_unobligated": 120666000,
+      "unapportioned_unobligated": 24752000,
+      "expired_unobligated": 9282000,
       "status": "Active"
     },
     {
@@ -346,10 +346,10 @@
       "context": "USDA FAS",
       "fy": "2024",
       "total_budgetary_resources": 245000000,
-      "unobligated_balance": 29400000,
-      "apportioned_unobligated": 22932000,
-      "unapportioned_unobligated": 4704000,
-      "expired_unobligated": 1764000,
+      "unobligated_balance": 22050000,
+      "apportioned_unobligated": 17199000,
+      "unapportioned_unobligated": 3528000,
+      "expired_unobligated": 1323000,
       "status": "Active"
     },
     {
@@ -360,10 +360,10 @@
       "context": "USDA FAS",
       "fy": "2025",
       "total_budgetary_resources": 253574999,
-      "unobligated_balance": 32964749,
-      "apportioned_unobligated": 25712504,
-      "unapportioned_unobligated": 5274359,
-      "expired_unobligated": 1977886,
+      "unobligated_balance": 40571999,
+      "apportioned_unobligated": 31646159,
+      "unapportioned_unobligated": 6491519,
+      "expired_unobligated": 2434321,
       "status": "Active"
     },
     {
@@ -388,10 +388,10 @@
       "context": "USDA FAS",
       "fy": "2027",
       "total_budgetary_resources": 270725000,
-      "unobligated_balance": 43316000,
-      "apportioned_unobligated": 33786480,
-      "unapportioned_unobligated": 6930560,
-      "expired_unobligated": 2598960,
+      "unobligated_balance": 35194250,
+      "apportioned_unobligated": 27451515,
+      "unapportioned_unobligated": 5631080,
+      "expired_unobligated": 2111655,
       "status": "Active"
     },
     {
@@ -416,10 +416,10 @@
       "context": "USDA FAS",
       "fy": "2025",
       "total_budgetary_resources": 87975000,
-      "unobligated_balance": 9677250,
-      "apportioned_unobligated": 7548255,
-      "unapportioned_unobligated": 1548360,
-      "expired_unobligated": 580635,
+      "unobligated_balance": 10557000,
+      "apportioned_unobligated": 8234460,
+      "unapportioned_unobligated": 1689120,
+      "expired_unobligated": 633420,
       "status": "Active"
     },
     {
@@ -430,10 +430,10 @@
       "context": "USDA FAS",
       "fy": "2026",
       "total_budgetary_resources": 90950000,
-      "unobligated_balance": 11823500,
-      "apportioned_unobligated": 9222330,
-      "unapportioned_unobligated": 1891760,
-      "expired_unobligated": 709410,
+      "unobligated_balance": 8185500,
+      "apportioned_unobligated": 6384690,
+      "unapportioned_unobligated": 1309680,
+      "expired_unobligated": 491130,
       "status": "Active"
     },
     {
@@ -444,10 +444,10 @@
       "context": "USDA FAS",
       "fy": "2027",
       "total_budgetary_resources": 93925000,
-      "unobligated_balance": 11271000,
-      "apportioned_unobligated": 8791380,
-      "unapportioned_unobligated": 1803360,
-      "expired_unobligated": 676260,
+      "unobligated_balance": 7514000,
+      "apportioned_unobligated": 5860920,
+      "unapportioned_unobligated": 1202240,
+      "expired_unobligated": 450840,
       "status": "Active"
     },
     {
@@ -458,10 +458,10 @@
       "context": "International Boundary & Water Comm",
       "fy": "2024",
       "total_budgetary_resources": 55000000,
-      "unobligated_balance": 8800000,
-      "apportioned_unobligated": 6864000,
-      "unapportioned_unobligated": 1408000,
-      "expired_unobligated": 528000,
+      "unobligated_balance": 5500000,
+      "apportioned_unobligated": 4290000,
+      "unapportioned_unobligated": 880000,
+      "expired_unobligated": 330000,
       "status": "Active"
     },
     {
@@ -472,10 +472,10 @@
       "context": "International Boundary & Water Comm",
       "fy": "2025",
       "total_budgetary_resources": 56924999,
-      "unobligated_balance": 3984749,
-      "apportioned_unobligated": 3108104,
-      "unapportioned_unobligated": 637559,
-      "expired_unobligated": 239086,
+      "unobligated_balance": 7400249,
+      "apportioned_unobligated": 5772194,
+      "unapportioned_unobligated": 1184039,
+      "expired_unobligated": 444016,
       "status": "Active"
     },
     {
@@ -486,10 +486,10 @@
       "context": "International Boundary & Water Comm",
       "fy": "2026",
       "total_budgetary_resources": 58850000,
-      "unobligated_balance": 7650500,
-      "apportioned_unobligated": 5967390,
-      "unapportioned_unobligated": 1224080,
-      "expired_unobligated": 459030,
+      "unobligated_balance": 8239000,
+      "apportioned_unobligated": 6426420,
+      "unapportioned_unobligated": 1318240,
+      "expired_unobligated": 494340,
       "status": "Active"
     },
     {
@@ -500,10 +500,10 @@
       "context": "International Boundary & Water Comm",
       "fy": "2027",
       "total_budgetary_resources": 60775000,
-      "unobligated_balance": 4254250,
-      "apportioned_unobligated": 3318315,
-      "unapportioned_unobligated": 680680,
-      "expired_unobligated": 255255,
+      "unobligated_balance": 9116250,
+      "apportioned_unobligated": 7110675,
+      "unapportioned_unobligated": 1458600,
+      "expired_unobligated": 546975,
       "status": "Active"
     },
     {
@@ -514,10 +514,10 @@
       "context": "International Boundary & Water Comm",
       "fy": "2024",
       "total_budgetary_resources": 32000000,
-      "unobligated_balance": 4480000,
-      "apportioned_unobligated": 3494400,
-      "unapportioned_unobligated": 716800,
-      "expired_unobligated": 268800,
+      "unobligated_balance": 3200000,
+      "apportioned_unobligated": 2496000,
+      "unapportioned_unobligated": 512000,
+      "expired_unobligated": 192000,
       "status": "Active"
     },
     {
@@ -528,10 +528,10 @@
       "context": "International Boundary & Water Comm",
       "fy": "2025",
       "total_budgetary_resources": 33119999,
-      "unobligated_balance": 4636799,
-      "apportioned_unobligated": 3616703,
-      "unapportioned_unobligated": 741887,
-      "expired_unobligated": 278209,
+      "unobligated_balance": 2318399,
+      "apportioned_unobligated": 1808351,
+      "unapportioned_unobligated": 370943,
+      "expired_unobligated": 139105,
       "status": "Active"
     },
     {
@@ -542,10 +542,10 @@
       "context": "International Boundary & Water Comm",
       "fy": "2026",
       "total_budgetary_resources": 34240000,
-      "unobligated_balance": 3081600,
-      "apportioned_unobligated": 2403648,
-      "unapportioned_unobligated": 493056,
-      "expired_unobligated": 184896,
+      "unobligated_balance": 2739200,
+      "apportioned_unobligated": 2136576,
+      "unapportioned_unobligated": 438272,
+      "expired_unobligated": 164352,
       "status": "Active"
     },
     {
@@ -570,10 +570,10 @@
       "context": "Bureau of Oceans & Environment",
       "fy": "2024",
       "total_budgetary_resources": 62000000,
-      "unobligated_balance": 8060000,
-      "apportioned_unobligated": 6286800,
-      "unapportioned_unobligated": 1289600,
-      "expired_unobligated": 483600,
+      "unobligated_balance": 6820000,
+      "apportioned_unobligated": 5319600,
+      "unapportioned_unobligated": 1091200,
+      "expired_unobligated": 409200,
       "status": "Active"
     },
     {
@@ -584,10 +584,10 @@
       "context": "Bureau of Oceans & Environment",
       "fy": "2025",
       "total_budgetary_resources": 64169999,
-      "unobligated_balance": 7700399,
-      "apportioned_unobligated": 6006311,
-      "unapportioned_unobligated": 1232063,
-      "expired_unobligated": 462025,
+      "unobligated_balance": 6416999,
+      "apportioned_unobligated": 5005259,
+      "unapportioned_unobligated": 1026719,
+      "expired_unobligated": 385021,
       "status": "Active"
     },
     {
@@ -598,10 +598,10 @@
       "context": "Bureau of Oceans & Environment",
       "fy": "2026",
       "total_budgetary_resources": 66340000,
-      "unobligated_balance": 8624200,
-      "apportioned_unobligated": 6726876,
-      "unapportioned_unobligated": 1379872,
-      "expired_unobligated": 517452,
+      "unobligated_balance": 7297400,
+      "apportioned_unobligated": 5691972,
+      "unapportioned_unobligated": 1167584,
+      "expired_unobligated": 437844,
       "status": "Active"
     },
     {
@@ -612,10 +612,10 @@
       "context": "Bureau of Oceans & Environment",
       "fy": "2027",
       "total_budgetary_resources": 68510000,
-      "unobligated_balance": 7536100,
-      "apportioned_unobligated": 5878158,
-      "unapportioned_unobligated": 1205776,
-      "expired_unobligated": 452166,
+      "unobligated_balance": 9591400,
+      "apportioned_unobligated": 7481292,
+      "unapportioned_unobligated": 1534624,
+      "expired_unobligated": 575484,
       "status": "Active"
     },
     {
@@ -626,10 +626,10 @@
       "context": "Overseas Buildings Operations",
       "fy": "2024",
       "total_budgetary_resources": 1980000000,
-      "unobligated_balance": 277200000,
-      "apportioned_unobligated": 216216000,
-      "unapportioned_unobligated": 44352000,
-      "expired_unobligated": 16632000,
+      "unobligated_balance": 198000000,
+      "apportioned_unobligated": 154440000,
+      "unapportioned_unobligated": 31680000,
+      "expired_unobligated": 11880000,
       "status": "Active"
     },
     {
@@ -640,10 +640,10 @@
       "context": "Overseas Buildings Operations",
       "fy": "2025",
       "total_budgetary_resources": 2049299999,
-      "unobligated_balance": 184436999,
-      "apportioned_unobligated": 143860859,
-      "unapportioned_unobligated": 29509919,
-      "expired_unobligated": 11066221,
+      "unobligated_balance": 286901999,
+      "apportioned_unobligated": 223783559,
+      "unapportioned_unobligated": 45904319,
+      "expired_unobligated": 17214121,
       "status": "Active"
     },
     {
@@ -654,10 +654,10 @@
       "context": "Overseas Buildings Operations",
       "fy": "2026",
       "total_budgetary_resources": 2118600000,
-      "unobligated_balance": 254232000,
-      "apportioned_unobligated": 198300960,
-      "unapportioned_unobligated": 40677120,
-      "expired_unobligated": 15253920,
+      "unobligated_balance": 338976000,
+      "apportioned_unobligated": 264401280,
+      "unapportioned_unobligated": 54236160,
+      "expired_unobligated": 20338560,
       "status": "Active"
     },
     {
@@ -668,10 +668,10 @@
       "context": "Overseas Buildings Operations",
       "fy": "2027",
       "total_budgetary_resources": 2187900000,
-      "unobligated_balance": 218790000,
-      "apportioned_unobligated": 170656200,
-      "unapportioned_unobligated": 35006400,
-      "expired_unobligated": 13127400,
+      "unobligated_balance": 284427000,
+      "apportioned_unobligated": 221853060,
+      "unapportioned_unobligated": 45508320,
+      "expired_unobligated": 17065620,
       "status": "Active"
     },
     {
@@ -696,10 +696,10 @@
       "context": "Bureau of Diplomatic Security",
       "fy": "2025",
       "total_budgetary_resources": 39330000,
-      "unobligated_balance": 3933000,
-      "apportioned_unobligated": 3067740,
-      "unapportioned_unobligated": 629280,
-      "expired_unobligated": 235980,
+      "unobligated_balance": 3539700,
+      "apportioned_unobligated": 2760966,
+      "unapportioned_unobligated": 566352,
+      "expired_unobligated": 212382,
       "status": "Active"
     },
     {
@@ -710,10 +710,10 @@
       "context": "Bureau of Diplomatic Security",
       "fy": "2026",
       "total_budgetary_resources": 40660000,
-      "unobligated_balance": 6099000,
-      "apportioned_unobligated": 4757220,
-      "unapportioned_unobligated": 975840,
-      "expired_unobligated": 365940,
+      "unobligated_balance": 4879200,
+      "apportioned_unobligated": 3805776,
+      "unapportioned_unobligated": 780672,
+      "expired_unobligated": 292752,
       "status": "Active"
     },
     {
@@ -724,10 +724,10 @@
       "context": "Bureau of Diplomatic Security",
       "fy": "2027",
       "total_budgetary_resources": 41990000,
-      "unobligated_balance": 2939300,
-      "apportioned_unobligated": 2292654,
-      "unapportioned_unobligated": 470288,
-      "expired_unobligated": 176358,
+      "unobligated_balance": 5038800,
+      "apportioned_unobligated": 3930264,
+      "unapportioned_unobligated": 806208,
+      "expired_unobligated": 302328,
       "status": "Active"
     },
     {
@@ -738,10 +738,10 @@
       "context": "Bureau of Educational & Cultural Affairs",
       "fy": "2024",
       "total_budgetary_resources": 775000000,
-      "unobligated_balance": 93000000,
-      "apportioned_unobligated": 72540000,
-      "unapportioned_unobligated": 14880000,
-      "expired_unobligated": 5580000,
+      "unobligated_balance": 116250000,
+      "apportioned_unobligated": 90675000,
+      "unapportioned_unobligated": 18600000,
+      "expired_unobligated": 6975000,
       "status": "Active"
     },
     {
@@ -752,10 +752,10 @@
       "context": "Bureau of Educational & Cultural Affairs",
       "fy": "2025",
       "total_budgetary_resources": 802124999,
-      "unobligated_balance": 128339999,
-      "apportioned_unobligated": 100105199,
-      "unapportioned_unobligated": 20534399,
-      "expired_unobligated": 7700401,
+      "unobligated_balance": 104276249,
+      "apportioned_unobligated": 81335474,
+      "unapportioned_unobligated": 16684199,
+      "expired_unobligated": 6256576,
       "status": "Active"
     },
     {
@@ -766,10 +766,10 @@
       "context": "Bureau of Educational & Cultural Affairs",
       "fy": "2026",
       "total_budgetary_resources": 829250000,
-      "unobligated_balance": 132680000,
-      "apportioned_unobligated": 103490400,
-      "unapportioned_unobligated": 21228800,
-      "expired_unobligated": 7960800,
+      "unobligated_balance": 82925000,
+      "apportioned_unobligated": 64681500,
+      "unapportioned_unobligated": 13268000,
+      "expired_unobligated": 4975500,
       "status": "Active"
     },
     {
@@ -780,10 +780,10 @@
       "context": "Bureau of Educational & Cultural Affairs",
       "fy": "2027",
       "total_budgetary_resources": 856375000,
-      "unobligated_balance": 68510000,
-      "apportioned_unobligated": 53437800,
-      "unapportioned_unobligated": 10961600,
-      "expired_unobligated": 4110600,
+      "unobligated_balance": 85637500,
+      "apportioned_unobligated": 66797250,
+      "unapportioned_unobligated": 13702000,
+      "expired_unobligated": 5138250,
       "status": "Active"
     },
     {
@@ -794,10 +794,10 @@
       "context": "Core State Dept Operations",
       "fy": "2024",
       "total_budgetary_resources": 3850000000,
-      "unobligated_balance": 308000000,
-      "apportioned_unobligated": 240240000,
-      "unapportioned_unobligated": 49280000,
-      "expired_unobligated": 18480000,
+      "unobligated_balance": 346500000,
+      "apportioned_unobligated": 270270000,
+      "unapportioned_unobligated": 55440000,
+      "expired_unobligated": 20790000,
       "status": "Active"
     },
     {
@@ -808,10 +808,10 @@
       "context": "Core State Dept Operations",
       "fy": "2025",
       "total_budgetary_resources": 3984749999,
-      "unobligated_balance": 557864999,
-      "apportioned_unobligated": 435134699,
-      "unapportioned_unobligated": 89258399,
-      "expired_unobligated": 33471901,
+      "unobligated_balance": 278932499,
+      "apportioned_unobligated": 217567349,
+      "unapportioned_unobligated": 44629199,
+      "expired_unobligated": 16735951,
       "status": "Active"
     },
     {
@@ -836,10 +836,10 @@
       "context": "Core State Dept Operations",
       "fy": "2027",
       "total_budgetary_resources": 4254250000,
-      "unobligated_balance": 340340000,
-      "apportioned_unobligated": 265465200,
-      "unapportioned_unobligated": 54454400,
-      "expired_unobligated": 20420400,
+      "unobligated_balance": 382882500,
+      "apportioned_unobligated": 298648350,
+      "unapportioned_unobligated": 61261200,
+      "expired_unobligated": 22972950,
       "status": "Active"
     },
     {
@@ -850,10 +850,10 @@
       "context": "Independent State Dept Oversight",
       "fy": "2024",
       "total_budgetary_resources": 130000000,
-      "unobligated_balance": 19500000,
-      "apportioned_unobligated": 15210000,
-      "unapportioned_unobligated": 3120000,
-      "expired_unobligated": 1170000,
+      "unobligated_balance": 16900000,
+      "apportioned_unobligated": 13182000,
+      "unapportioned_unobligated": 2704000,
+      "expired_unobligated": 1014000,
       "status": "Active"
     },
     {
@@ -864,10 +864,10 @@
       "context": "Independent State Dept Oversight",
       "fy": "2025",
       "total_budgetary_resources": 134550000,
-      "unobligated_balance": 10764000,
-      "apportioned_unobligated": 8395920,
-      "unapportioned_unobligated": 1722240,
-      "expired_unobligated": 645840,
+      "unobligated_balance": 13455000,
+      "apportioned_unobligated": 10494900,
+      "unapportioned_unobligated": 2152800,
+      "expired_unobligated": 807300,
       "status": "Active"
     },
     {
@@ -892,10 +892,10 @@
       "context": "Independent State Dept Oversight",
       "fy": "2027",
       "total_budgetary_resources": 143650000,
-      "unobligated_balance": 22984000,
-      "apportioned_unobligated": 17927520,
-      "unapportioned_unobligated": 3677440,
-      "expired_unobligated": 1379040,
+      "unobligated_balance": 11492000,
+      "apportioned_unobligated": 8963760,
+      "unapportioned_unobligated": 1838720,
+      "expired_unobligated": 689520,
       "status": "Active"
     },
     {
@@ -906,10 +906,10 @@
       "context": "Bureau of Intl Organization Affairs",
       "fy": "2024",
       "total_budgetary_resources": 1480000000,
-      "unobligated_balance": 207200000,
-      "apportioned_unobligated": 161616000,
-      "unapportioned_unobligated": 33152000,
-      "expired_unobligated": 12432000,
+      "unobligated_balance": 103600000,
+      "apportioned_unobligated": 80808000,
+      "unapportioned_unobligated": 16576000,
+      "expired_unobligated": 6216000,
       "status": "Active"
     },
     {
@@ -920,10 +920,10 @@
       "context": "Bureau of Intl Organization Affairs",
       "fy": "2025",
       "total_budgetary_resources": 1531800000,
-      "unobligated_balance": 122544000,
-      "apportioned_unobligated": 95584320,
-      "unapportioned_unobligated": 19607040,
-      "expired_unobligated": 7352640,
+      "unobligated_balance": 214452000,
+      "apportioned_unobligated": 167272560,
+      "unapportioned_unobligated": 34312320,
+      "expired_unobligated": 12867120,
       "status": "Active"
     },
     {
@@ -934,10 +934,10 @@
       "context": "Bureau of Intl Organization Affairs",
       "fy": "2026",
       "total_budgetary_resources": 1583600000,
-      "unobligated_balance": 190032000,
-      "apportioned_unobligated": 148224960,
-      "unapportioned_unobligated": 30405120,
-      "expired_unobligated": 11401920,
+      "unobligated_balance": 221704000,
+      "apportioned_unobligated": 172929120,
+      "unapportioned_unobligated": 35472640,
+      "expired_unobligated": 13302240,
       "status": "Active"
     },
     {
@@ -948,10 +948,10 @@
       "context": "Bureau of Intl Organization Affairs",
       "fy": "2027",
       "total_budgetary_resources": 1635400000,
-      "unobligated_balance": 245310000,
-      "apportioned_unobligated": 191341800,
-      "unapportioned_unobligated": 39249600,
-      "expired_unobligated": 14718600,
+      "unobligated_balance": 147186000,
+      "apportioned_unobligated": 114805080,
+      "unapportioned_unobligated": 23549760,
+      "expired_unobligated": 8831160,
       "status": "Active"
     },
     {
@@ -976,10 +976,10 @@
       "context": "Bureau of Intl Organization Affairs",
       "fy": "2025",
       "total_budgetary_resources": 1304100000,
-      "unobligated_balance": 156492000,
-      "apportioned_unobligated": 122063760,
-      "unapportioned_unobligated": 25038720,
-      "expired_unobligated": 9389520,
+      "unobligated_balance": 117369000,
+      "apportioned_unobligated": 91547820,
+      "unapportioned_unobligated": 18779040,
+      "expired_unobligated": 7042140,
       "status": "Active"
     },
     {
@@ -990,10 +990,10 @@
       "context": "Bureau of Intl Organization Affairs",
       "fy": "2026",
       "total_budgetary_resources": 1348200000,
-      "unobligated_balance": 215712000,
-      "apportioned_unobligated": 168255360,
-      "unapportioned_unobligated": 34513920,
-      "expired_unobligated": 12942720,
+      "unobligated_balance": 161784000,
+      "apportioned_unobligated": 126191520,
+      "unapportioned_unobligated": 25885440,
+      "expired_unobligated": 9707040,
       "status": "Active"
     },
     {
@@ -1004,10 +1004,10 @@
       "context": "Bureau of Intl Organization Affairs",
       "fy": "2027",
       "total_budgetary_resources": 1392300000,
-      "unobligated_balance": 208845000,
-      "apportioned_unobligated": 162899100,
-      "unapportioned_unobligated": 33415200,
-      "expired_unobligated": 12530700,
+      "unobligated_balance": 97461000,
+      "apportioned_unobligated": 76019580,
+      "unapportioned_unobligated": 15593760,
+      "expired_unobligated": 5847660,
       "status": "Active"
     },
     {
@@ -1018,10 +1018,10 @@
       "context": "Bureau of Consular Affairs",
       "fy": "2024",
       "total_budgetary_resources": 12000000,
-      "unobligated_balance": 1320000,
-      "apportioned_unobligated": 1029600,
-      "unapportioned_unobligated": 211200,
-      "expired_unobligated": 79200,
+      "unobligated_balance": 1920000,
+      "apportioned_unobligated": 1497600,
+      "unapportioned_unobligated": 307200,
+      "expired_unobligated": 115200,
       "status": "Active"
     },
     {
@@ -1032,10 +1032,10 @@
       "context": "Bureau of Consular Affairs",
       "fy": "2025",
       "total_budgetary_resources": 12419999,
-      "unobligated_balance": 869399,
-      "apportioned_unobligated": 678131,
-      "unapportioned_unobligated": 139103,
-      "expired_unobligated": 52165,
+      "unobligated_balance": 1738799,
+      "apportioned_unobligated": 1356263,
+      "unapportioned_unobligated": 278207,
+      "expired_unobligated": 104329,
       "status": "Active"
     },
     {
@@ -1046,10 +1046,10 @@
       "context": "Bureau of Consular Affairs",
       "fy": "2026",
       "total_budgetary_resources": 12840000,
-      "unobligated_balance": 2054400,
-      "apportioned_unobligated": 1602432,
-      "unapportioned_unobligated": 328704,
-      "expired_unobligated": 123264,
+      "unobligated_balance": 1797600,
+      "apportioned_unobligated": 1402128,
+      "unapportioned_unobligated": 287616,
+      "expired_unobligated": 107856,
       "status": "Active"
     },
     {
@@ -1060,10 +1060,10 @@
       "context": "Bureau of Consular Affairs",
       "fy": "2027",
       "total_budgetary_resources": 13260000,
-      "unobligated_balance": 2121600,
-      "apportioned_unobligated": 1654848,
-      "unapportioned_unobligated": 339456,
-      "expired_unobligated": 127296,
+      "unobligated_balance": 1326000,
+      "apportioned_unobligated": 1034280,
+      "unapportioned_unobligated": 212160,
+      "expired_unobligated": 79560,
       "status": "Active"
     },
     {
@@ -1088,10 +1088,10 @@
       "context": "Foreign Exchange Rate Fluctuations",
       "fy": "2025",
       "total_budgetary_resources": 25874999,
-      "unobligated_balance": 2328749,
-      "apportioned_unobligated": 1816424,
-      "unapportioned_unobligated": 372599,
-      "expired_unobligated": 139726,
+      "unobligated_balance": 3104999,
+      "apportioned_unobligated": 2421899,
+      "unapportioned_unobligated": 496799,
+      "expired_unobligated": 186301,
       "status": "Active"
     },
     {
@@ -1102,10 +1102,10 @@
       "context": "Foreign Exchange Rate Fluctuations",
       "fy": "2026",
       "total_budgetary_resources": 26750000,
-      "unobligated_balance": 1872500,
-      "apportioned_unobligated": 1460550,
-      "unapportioned_unobligated": 299600,
-      "expired_unobligated": 112350,
+      "unobligated_balance": 4012500,
+      "apportioned_unobligated": 3129750,
+      "unapportioned_unobligated": 642000,
+      "expired_unobligated": 240750,
       "status": "Active"
     },
     {
@@ -1116,10 +1116,10 @@
       "context": "Foreign Exchange Rate Fluctuations",
       "fy": "2027",
       "total_budgetary_resources": 27625000,
-      "unobligated_balance": 3591250,
-      "apportioned_unobligated": 2801175,
-      "unapportioned_unobligated": 574600,
-      "expired_unobligated": 215475,
+      "unobligated_balance": 4420000,
+      "apportioned_unobligated": 3447600,
+      "unapportioned_unobligated": 707200,
+      "expired_unobligated": 265200,
       "status": "Active"
     },
     {
@@ -1130,10 +1130,10 @@
       "context": "PEPFAR Coordinator",
       "fy": "2024",
       "total_budgetary_resources": 5720000000,
-      "unobligated_balance": 629200000,
-      "apportioned_unobligated": 490776000,
-      "unapportioned_unobligated": 100672000,
-      "expired_unobligated": 37752000,
+      "unobligated_balance": 743600000,
+      "apportioned_unobligated": 580008000,
+      "unapportioned_unobligated": 118976000,
+      "expired_unobligated": 44616000,
       "status": "Active"
     },
     {
@@ -1144,10 +1144,10 @@
       "context": "PEPFAR Coordinator",
       "fy": "2025",
       "total_budgetary_resources": 5920200000,
-      "unobligated_balance": 888030000,
-      "apportioned_unobligated": 692663400,
-      "unapportioned_unobligated": 142084800,
-      "expired_unobligated": 53281800,
+      "unobligated_balance": 473616000,
+      "apportioned_unobligated": 369420480,
+      "unapportioned_unobligated": 75778560,
+      "expired_unobligated": 28416960,
       "status": "Active"
     },
     {
@@ -1158,10 +1158,10 @@
       "context": "PEPFAR Coordinator",
       "fy": "2026",
       "total_budgetary_resources": 6120400000,
-      "unobligated_balance": 979264000,
-      "apportioned_unobligated": 763825920,
-      "unapportioned_unobligated": 156682240,
-      "expired_unobligated": 58755840,
+      "unobligated_balance": 612040000,
+      "apportioned_unobligated": 477391200,
+      "unapportioned_unobligated": 97926400,
+      "expired_unobligated": 36722400,
       "status": "Active"
     },
     {
@@ -1172,10 +1172,10 @@
       "context": "PEPFAR Coordinator",
       "fy": "2027",
       "total_budgetary_resources": 6320600000,
-      "unobligated_balance": 568854000,
-      "apportioned_unobligated": 443706120,
-      "unapportioned_unobligated": 91016640,
-      "expired_unobligated": 34131240,
+      "unobligated_balance": 1011296000,
+      "apportioned_unobligated": 788810880,
+      "unapportioned_unobligated": 161807360,
+      "expired_unobligated": 60677760,
       "status": "Active"
     },
     {
@@ -1200,10 +1200,10 @@
       "context": "ISN, CT, and PM Bureaus",
       "fy": "2025",
       "total_budgetary_resources": 921149999,
-      "unobligated_balance": 64480499,
-      "apportioned_unobligated": 50294789,
-      "unapportioned_unobligated": 10316879,
-      "expired_unobligated": 3868831,
+      "unobligated_balance": 92114999,
+      "apportioned_unobligated": 71849699,
+      "unapportioned_unobligated": 14738399,
+      "expired_unobligated": 5526901,
       "status": "Active"
     },
     {
@@ -1214,10 +1214,10 @@
       "context": "ISN, CT, and PM Bureaus",
       "fy": "2026",
       "total_budgetary_resources": 952300000,
-      "unobligated_balance": 66661000,
-      "apportioned_unobligated": 51995580,
-      "unapportioned_unobligated": 10665760,
-      "expired_unobligated": 3999660,
+      "unobligated_balance": 76184000,
+      "apportioned_unobligated": 59423520,
+      "unapportioned_unobligated": 12189440,
+      "expired_unobligated": 4571040,
       "status": "Active"
     },
     {
@@ -1228,10 +1228,10 @@
       "context": "ISN, CT, and PM Bureaus",
       "fy": "2027",
       "total_budgetary_resources": 983450000,
-      "unobligated_balance": 157352000,
-      "apportioned_unobligated": 122734560,
-      "unapportioned_unobligated": 25176320,
-      "expired_unobligated": 9441120,
+      "unobligated_balance": 137683000,
+      "apportioned_unobligated": 107392740,
+      "unapportioned_unobligated": 22029280,
+      "expired_unobligated": 8260980,
       "status": "Active"
     },
     {
@@ -1242,10 +1242,10 @@
       "context": "Bureau of Political-Military Affairs",
       "fy": "2024",
       "total_budgetary_resources": 510000000,
-      "unobligated_balance": 35700000,
-      "apportioned_unobligated": 27846000,
-      "unapportioned_unobligated": 5712000,
-      "expired_unobligated": 2142000,
+      "unobligated_balance": 40800000,
+      "apportioned_unobligated": 31824000,
+      "unapportioned_unobligated": 6528000,
+      "expired_unobligated": 2448000,
       "status": "Active"
     },
     {
@@ -1256,10 +1256,10 @@
       "context": "Bureau of Political-Military Affairs",
       "fy": "2025",
       "total_budgetary_resources": 527849999,
-      "unobligated_balance": 68620499,
-      "apportioned_unobligated": 53523989,
-      "unapportioned_unobligated": 10979279,
-      "expired_unobligated": 4117231,
+      "unobligated_balance": 63341999,
+      "apportioned_unobligated": 49406759,
+      "unapportioned_unobligated": 10134719,
+      "expired_unobligated": 3800521,
       "status": "Active"
     },
     {
@@ -1270,10 +1270,10 @@
       "context": "Bureau of Political-Military Affairs",
       "fy": "2026",
       "total_budgetary_resources": 545700000,
-      "unobligated_balance": 70941000,
-      "apportioned_unobligated": 55333980,
-      "unapportioned_unobligated": 11350560,
-      "expired_unobligated": 4256460,
+      "unobligated_balance": 60027000,
+      "apportioned_unobligated": 46821060,
+      "unapportioned_unobligated": 9604320,
+      "expired_unobligated": 3601620,
       "status": "Active"
     },
     {
@@ -1284,10 +1284,10 @@
       "context": "Bureau of Political-Military Affairs",
       "fy": "2027",
       "total_budgetary_resources": 563550000,
-      "unobligated_balance": 73261500,
-      "apportioned_unobligated": 57143970,
-      "unapportioned_unobligated": 11721840,
-      "expired_unobligated": 4395690,
+      "unobligated_balance": 45084000,
+      "apportioned_unobligated": 35165520,
+      "unapportioned_unobligated": 7213440,
+      "expired_unobligated": 2705040,
       "status": "Active"
     },
     {
@@ -1298,10 +1298,10 @@
       "context": "Bureau of DRL",
       "fy": "2024",
       "total_budgetary_resources": 340000000,
-      "unobligated_balance": 34000000,
-      "apportioned_unobligated": 26520000,
-      "unapportioned_unobligated": 5440000,
-      "expired_unobligated": 2040000,
+      "unobligated_balance": 47600000,
+      "apportioned_unobligated": 37128000,
+      "unapportioned_unobligated": 7616000,
+      "expired_unobligated": 2856000,
       "status": "Active"
     },
     {
@@ -1312,10 +1312,10 @@
       "context": "Bureau of DRL",
       "fy": "2025",
       "total_budgetary_resources": 351900000,
-      "unobligated_balance": 28152000,
-      "apportioned_unobligated": 21958560,
-      "unapportioned_unobligated": 4504320,
-      "expired_unobligated": 1689120,
+      "unobligated_balance": 42228000,
+      "apportioned_unobligated": 32937840,
+      "unapportioned_unobligated": 6756480,
+      "expired_unobligated": 2533680,
       "status": "Active"
     },
     {
@@ -1326,10 +1326,10 @@
       "context": "Bureau of DRL",
       "fy": "2026",
       "total_budgetary_resources": 363800000,
-      "unobligated_balance": 29104000,
-      "apportioned_unobligated": 22701120,
-      "unapportioned_unobligated": 4656640,
-      "expired_unobligated": 1746240,
+      "unobligated_balance": 25466000,
+      "apportioned_unobligated": 19863480,
+      "unapportioned_unobligated": 4074560,
+      "expired_unobligated": 1527960,
       "status": "Active"
     },
     {
@@ -1340,10 +1340,10 @@
       "context": "Bureau of DRL",
       "fy": "2027",
       "total_budgetary_resources": 375700000,
-      "unobligated_balance": 30056000,
-      "apportioned_unobligated": 23443680,
-      "unapportioned_unobligated": 4808960,
-      "expired_unobligated": 1803360,
+      "unobligated_balance": 45084000,
+      "apportioned_unobligated": 35165520,
+      "unapportioned_unobligated": 7213440,
+      "expired_unobligated": 2705040,
       "status": "Active"
     },
     {
@@ -1354,10 +1354,10 @@
       "context": "Security Infrastructure Programs",
       "fy": "2024",
       "total_budgetary_resources": 115000000,
-      "unobligated_balance": 17250000,
-      "apportioned_unobligated": 13455000,
-      "unapportioned_unobligated": 2760000,
-      "expired_unobligated": 1035000,
+      "unobligated_balance": 8050000,
+      "apportioned_unobligated": 6279000,
+      "unapportioned_unobligated": 1288000,
+      "expired_unobligated": 483000,
       "status": "Active"
     },
     {
@@ -1368,10 +1368,10 @@
       "context": "Security Infrastructure Programs",
       "fy": "2025",
       "total_budgetary_resources": 119024999,
-      "unobligated_balance": 13092749,
-      "apportioned_unobligated": 10212344,
-      "unapportioned_unobligated": 2094839,
-      "expired_unobligated": 785566,
+      "unobligated_balance": 19043999,
+      "apportioned_unobligated": 14854319,
+      "unapportioned_unobligated": 3047039,
+      "expired_unobligated": 1142641,
       "status": "Active"
     },
     {
@@ -1382,10 +1382,10 @@
       "context": "Security Infrastructure Programs",
       "fy": "2026",
       "total_budgetary_resources": 123050000,
-      "unobligated_balance": 11074500,
-      "apportioned_unobligated": 8638110,
-      "unapportioned_unobligated": 1771920,
-      "expired_unobligated": 664470,
+      "unobligated_balance": 19688000,
+      "apportioned_unobligated": 15356640,
+      "unapportioned_unobligated": 3150080,
+      "expired_unobligated": 1181280,
       "status": "Active"
     },
     {
@@ -1396,10 +1396,10 @@
       "context": "Security Infrastructure Programs",
       "fy": "2027",
       "total_budgetary_resources": 127075000,
-      "unobligated_balance": 11436750,
-      "apportioned_unobligated": 8920665,
-      "unapportioned_unobligated": 1829880,
-      "expired_unobligated": 686205,
+      "unobligated_balance": 12707500,
+      "apportioned_unobligated": 9911850,
+      "unapportioned_unobligated": 2033200,
+      "expired_unobligated": 762450,
       "status": "Active"
     },
     {
@@ -1410,10 +1410,10 @@
       "context": "Bureau of PRM",
       "fy": "2024",
       "total_budgetary_resources": 3920000000,
-      "unobligated_balance": 392000000,
-      "apportioned_unobligated": 305760000,
-      "unapportioned_unobligated": 62720000,
-      "expired_unobligated": 23520000,
+      "unobligated_balance": 588000000,
+      "apportioned_unobligated": 458640000,
+      "unapportioned_unobligated": 94080000,
+      "expired_unobligated": 35280000,
       "status": "Active"
     },
     {
@@ -1424,10 +1424,10 @@
       "context": "Bureau of PRM",
       "fy": "2025",
       "total_budgetary_resources": 4057199999,
-      "unobligated_balance": 324575999,
-      "apportioned_unobligated": 253169279,
-      "unapportioned_unobligated": 51932159,
-      "expired_unobligated": 19474561,
+      "unobligated_balance": 446291999,
+      "apportioned_unobligated": 348107759,
+      "unapportioned_unobligated": 71406719,
+      "expired_unobligated": 26777521,
       "status": "Active"
     },
     {
@@ -1438,10 +1438,10 @@
       "context": "Bureau of PRM",
       "fy": "2026",
       "total_budgetary_resources": 4194400000,
-      "unobligated_balance": 629160000,
-      "apportioned_unobligated": 490744800,
-      "unapportioned_unobligated": 100665600,
-      "expired_unobligated": 37749600,
+      "unobligated_balance": 587216000,
+      "apportioned_unobligated": 458028480,
+      "unapportioned_unobligated": 93954560,
+      "expired_unobligated": 35232960,
       "status": "Active"
     },
     {
@@ -1452,10 +1452,10 @@
       "context": "Bureau of PRM",
       "fy": "2027",
       "total_budgetary_resources": 4331600000,
-      "unobligated_balance": 346528000,
-      "apportioned_unobligated": 270291840,
-      "unapportioned_unobligated": 55444480,
-      "expired_unobligated": 20791680,
+      "unobligated_balance": 303212000,
+      "apportioned_unobligated": 236505360,
+      "unapportioned_unobligated": 48513920,
+      "expired_unobligated": 18192720,
       "status": "Active"
     },
     {
@@ -1466,10 +1466,10 @@
       "context": "Bureau of PRM",
       "fy": "2024",
       "total_budgetary_resources": 100000000,
-      "unobligated_balance": 16000000,
-      "apportioned_unobligated": 12480000,
-      "unapportioned_unobligated": 2560000,
-      "expired_unobligated": 960000,
+      "unobligated_balance": 8000000,
+      "apportioned_unobligated": 6240000,
+      "unapportioned_unobligated": 1280000,
+      "expired_unobligated": 480000,
       "status": "Active"
     },
     {
@@ -1480,10 +1480,10 @@
       "context": "Bureau of PRM",
       "fy": "2025",
       "total_budgetary_resources": 103499999,
-      "unobligated_balance": 15524999,
-      "apportioned_unobligated": 12109499,
-      "unapportioned_unobligated": 2483999,
-      "expired_unobligated": 931501,
+      "unobligated_balance": 10349999,
+      "apportioned_unobligated": 8072999,
+      "unapportioned_unobligated": 1655999,
+      "expired_unobligated": 621001,
       "status": "Active"
     },
     {
@@ -1494,10 +1494,10 @@
       "context": "Bureau of PRM",
       "fy": "2026",
       "total_budgetary_resources": 107000000,
-      "unobligated_balance": 12840000,
-      "apportioned_unobligated": 10015200,
-      "unapportioned_unobligated": 2054400,
-      "expired_unobligated": 770400,
+      "unobligated_balance": 10700000,
+      "apportioned_unobligated": 8346000,
+      "unapportioned_unobligated": 1712000,
+      "expired_unobligated": 642000,
       "status": "Active"
     },
     {
@@ -1508,10 +1508,10 @@
       "context": "Bureau of PRM",
       "fy": "2027",
       "total_budgetary_resources": 110500000,
-      "unobligated_balance": 8840000,
-      "apportioned_unobligated": 6895200,
-      "unapportioned_unobligated": 1414400,
-      "expired_unobligated": 530400,
+      "unobligated_balance": 14365000,
+      "apportioned_unobligated": 11204700,
+      "unapportioned_unobligated": 2298400,
+      "expired_unobligated": 861900,
       "status": "Active"
     },
     {
@@ -1522,10 +1522,10 @@
       "context": "Educational Institution",
       "fy": "2024",
       "total_budgetary_resources": 22000000,
-      "unobligated_balance": 1760000,
-      "apportioned_unobligated": 1372800,
-      "unapportioned_unobligated": 281600,
-      "expired_unobligated": 105600,
+      "unobligated_balance": 1980000,
+      "apportioned_unobligated": 1544400,
+      "unapportioned_unobligated": 316800,
+      "expired_unobligated": 118800,
       "status": "Active"
     },
     {
@@ -1536,10 +1536,10 @@
       "context": "Educational Institution",
       "fy": "2025",
       "total_budgetary_resources": 22770000,
-      "unobligated_balance": 1821600,
-      "apportioned_unobligated": 1420848,
-      "unapportioned_unobligated": 291456,
-      "expired_unobligated": 109296,
+      "unobligated_balance": 2049300,
+      "apportioned_unobligated": 1598454,
+      "unapportioned_unobligated": 327888,
+      "expired_unobligated": 122958,
       "status": "Active"
     },
     {
@@ -1550,10 +1550,10 @@
       "context": "Educational Institution",
       "fy": "2026",
       "total_budgetary_resources": 23540000,
-      "unobligated_balance": 3060200,
-      "apportioned_unobligated": 2386956,
-      "unapportioned_unobligated": 489632,
-      "expired_unobligated": 183612,
+      "unobligated_balance": 2824800,
+      "apportioned_unobligated": 2203344,
+      "unapportioned_unobligated": 451968,
+      "expired_unobligated": 169488,
       "status": "Active"
     },
     {
@@ -1564,10 +1564,10 @@
       "context": "Educational Institution",
       "fy": "2027",
       "total_budgetary_resources": 24310000,
-      "unobligated_balance": 3646500,
-      "apportioned_unobligated": 2844270,
-      "unapportioned_unobligated": 583440,
-      "expired_unobligated": 218790,
+      "unobligated_balance": 2674100,
+      "apportioned_unobligated": 2085798,
+      "unapportioned_unobligated": 427856,
+      "expired_unobligated": 160446,
       "status": "Active"
     },
     {
@@ -1578,10 +1578,10 @@
       "context": "Rule of Law Grantee",
       "fy": "2024",
       "total_budgetary_resources": 20000000,
-      "unobligated_balance": 1800000,
-      "apportioned_unobligated": 1404000,
-      "unapportioned_unobligated": 288000,
-      "expired_unobligated": 108000,
+      "unobligated_balance": 1400000,
+      "apportioned_unobligated": 1092000,
+      "unapportioned_unobligated": 224000,
+      "expired_unobligated": 84000,
       "status": "Active"
     },
     {
@@ -1592,10 +1592,10 @@
       "context": "Rule of Law Grantee",
       "fy": "2025",
       "total_budgetary_resources": 20700000,
-      "unobligated_balance": 2898000,
-      "apportioned_unobligated": 2260440,
-      "unapportioned_unobligated": 463680,
-      "expired_unobligated": 173880,
+      "unobligated_balance": 1449000,
+      "apportioned_unobligated": 1130220,
+      "unapportioned_unobligated": 231840,
+      "expired_unobligated": 86940,
       "status": "Active"
     },
     {
@@ -1606,10 +1606,10 @@
       "context": "Rule of Law Grantee",
       "fy": "2026",
       "total_budgetary_resources": 21400000,
-      "unobligated_balance": 3210000,
-      "apportioned_unobligated": 2503800,
-      "unapportioned_unobligated": 513600,
-      "expired_unobligated": 192600,
+      "unobligated_balance": 2354000,
+      "apportioned_unobligated": 1836120,
+      "unapportioned_unobligated": 376640,
+      "expired_unobligated": 141240,
       "status": "Active"
     },
     {
@@ -1620,10 +1620,10 @@
       "context": "Rule of Law Grantee",
       "fy": "2027",
       "total_budgetary_resources": 22100000,
-      "unobligated_balance": 3094000,
-      "apportioned_unobligated": 2413320,
-      "unapportioned_unobligated": 495040,
-      "expired_unobligated": 185640,
+      "unobligated_balance": 1768000,
+      "apportioned_unobligated": 1379040,
+      "unapportioned_unobligated": 282880,
+      "expired_unobligated": 106080,
       "status": "Active"
     },
     {
@@ -1648,10 +1648,10 @@
       "context": "Bureau of Consular Affairs",
       "fy": "2025",
       "total_budgetary_resources": 15524999,
-      "unobligated_balance": 2328749,
-      "apportioned_unobligated": 1816424,
-      "unapportioned_unobligated": 372599,
-      "expired_unobligated": 139726,
+      "unobligated_balance": 2173499,
+      "apportioned_unobligated": 1695329,
+      "unapportioned_unobligated": 347759,
+      "expired_unobligated": 130411,
       "status": "Active"
     },
     {
@@ -1662,10 +1662,10 @@
       "context": "Bureau of Consular Affairs",
       "fy": "2026",
       "total_budgetary_resources": 16050000,
-      "unobligated_balance": 2247000,
-      "apportioned_unobligated": 1752660,
-      "unapportioned_unobligated": 359520,
-      "expired_unobligated": 134820,
+      "unobligated_balance": 2086500,
+      "apportioned_unobligated": 1627470,
+      "unapportioned_unobligated": 333840,
+      "expired_unobligated": 125190,
       "status": "Active"
     },
     {
@@ -1676,10 +1676,10 @@
       "context": "Bureau of Consular Affairs",
       "fy": "2027",
       "total_budgetary_resources": 16575000,
-      "unobligated_balance": 1823250,
-      "apportioned_unobligated": 1422135,
-      "unapportioned_unobligated": 291720,
-      "expired_unobligated": 109395,
+      "unobligated_balance": 1160250,
+      "apportioned_unobligated": 904995,
+      "unapportioned_unobligated": 185640,
+      "expired_unobligated": 69615,
       "status": "Active"
     },
     {
@@ -1690,10 +1690,10 @@
       "context": "Shared IT & Administrative Services",
       "fy": "2024",
       "total_budgetary_resources": 410000000,
-      "unobligated_balance": 65600000,
-      "apportioned_unobligated": 51168000,
-      "unapportioned_unobligated": 10496000,
-      "expired_unobligated": 3936000,
+      "unobligated_balance": 41000000,
+      "apportioned_unobligated": 31980000,
+      "unapportioned_unobligated": 6560000,
+      "expired_unobligated": 2460000,
       "status": "Active"
     },
     {
@@ -1704,10 +1704,10 @@
       "context": "Shared IT & Administrative Services",
       "fy": "2025",
       "total_budgetary_resources": 424349999,
-      "unobligated_balance": 63652499,
-      "apportioned_unobligated": 49648949,
-      "unapportioned_unobligated": 10184399,
-      "expired_unobligated": 3819151,
+      "unobligated_balance": 50921999,
+      "apportioned_unobligated": 39719159,
+      "unapportioned_unobligated": 8147519,
+      "expired_unobligated": 3055321,
       "status": "Active"
     },
     {
@@ -1718,10 +1718,10 @@
       "context": "Shared IT & Administrative Services",
       "fy": "2026",
       "total_budgetary_resources": 438700000,
-      "unobligated_balance": 39483000,
-      "apportioned_unobligated": 30796740,
-      "unapportioned_unobligated": 6317280,
-      "expired_unobligated": 2368980,
+      "unobligated_balance": 30709000,
+      "apportioned_unobligated": 23953020,
+      "unapportioned_unobligated": 4913440,
+      "expired_unobligated": 1842540,
       "status": "Active"
     },
     {
@@ -1732,10 +1732,10 @@
       "context": "Shared IT & Administrative Services",
       "fy": "2027",
       "total_budgetary_resources": 453050000,
-      "unobligated_balance": 63427000,
-      "apportioned_unobligated": 49473060,
-      "unapportioned_unobligated": 10148320,
-      "expired_unobligated": 3805620,
+      "unobligated_balance": 54366000,
+      "apportioned_unobligated": 42405480,
+      "unapportioned_unobligated": 8698560,
+      "expired_unobligated": 3261960,
       "status": "Active"
     },
     {
@@ -1746,10 +1746,10 @@
       "context": "DFC Direct Functions",
       "fy": "2024",
       "total_budgetary_resources": 820000000,
-      "unobligated_balance": 57400000,
-      "apportioned_unobligated": 44772000,
-      "unapportioned_unobligated": 9184000,
-      "expired_unobligated": 3444000,
+      "unobligated_balance": 98400000,
+      "apportioned_unobligated": 76752000,
+      "unapportioned_unobligated": 15744000,
+      "expired_unobligated": 5904000,
       "status": "Active"
     },
     {
@@ -1774,10 +1774,10 @@
       "context": "DFC Direct Functions",
       "fy": "2026",
       "total_budgetary_resources": 877400000,
-      "unobligated_balance": 114062000,
-      "apportioned_unobligated": 88968360,
-      "unapportioned_unobligated": 18249920,
-      "expired_unobligated": 6843720,
+      "unobligated_balance": 70192000,
+      "apportioned_unobligated": 54749760,
+      "unapportioned_unobligated": 11230720,
+      "expired_unobligated": 4211520,
       "status": "Active"
     },
     {
@@ -1788,10 +1788,10 @@
       "context": "DFC Direct Functions",
       "fy": "2027",
       "total_budgetary_resources": 906100000,
-      "unobligated_balance": 90610000,
-      "apportioned_unobligated": 70675800,
-      "unapportioned_unobligated": 14497600,
-      "expired_unobligated": 5436600,
+      "unobligated_balance": 108732000,
+      "apportioned_unobligated": 84810960,
+      "unapportioned_unobligated": 17397120,
+      "expired_unobligated": 6523920,
       "status": "Active"
     },
     {
@@ -1802,10 +1802,10 @@
       "context": "DFC Admin & Equity Account",
       "fy": "2024",
       "total_budgetary_resources": 190000000,
-      "unobligated_balance": 28500000,
-      "apportioned_unobligated": 22230000,
-      "unapportioned_unobligated": 4560000,
-      "expired_unobligated": 1710000,
+      "unobligated_balance": 20900000,
+      "apportioned_unobligated": 16302000,
+      "unapportioned_unobligated": 3344000,
+      "expired_unobligated": 1254000,
       "status": "Active"
     },
     {
@@ -1816,10 +1816,10 @@
       "context": "DFC Admin & Equity Account",
       "fy": "2025",
       "total_budgetary_resources": 196649999,
-      "unobligated_balance": 23597999,
-      "apportioned_unobligated": 18406439,
-      "unapportioned_unobligated": 3775679,
-      "expired_unobligated": 1415881,
+      "unobligated_balance": 13765499,
+      "apportioned_unobligated": 10737089,
+      "unapportioned_unobligated": 2202479,
+      "expired_unobligated": 825931,
       "status": "Active"
     },
     {
@@ -1830,10 +1830,10 @@
       "context": "DFC Admin & Equity Account",
       "fy": "2026",
       "total_budgetary_resources": 203300000,
-      "unobligated_balance": 28462000,
-      "apportioned_unobligated": 22200360,
-      "unapportioned_unobligated": 4553920,
-      "expired_unobligated": 1707720,
+      "unobligated_balance": 26429000,
+      "apportioned_unobligated": 20614620,
+      "unapportioned_unobligated": 4228640,
+      "expired_unobligated": 1585740,
       "status": "Active"
     },
     {
@@ -1844,10 +1844,10 @@
       "context": "DFC Admin & Equity Account",
       "fy": "2027",
       "total_budgetary_resources": 209950000,
-      "unobligated_balance": 29393000,
-      "apportioned_unobligated": 22926540,
-      "unapportioned_unobligated": 4702880,
-      "expired_unobligated": 1763580,
+      "unobligated_balance": 31492500,
+      "apportioned_unobligated": 24564150,
+      "unapportioned_unobligated": 5038800,
+      "expired_unobligated": 1889550,
       "status": "Active"
     },
     {
@@ -1858,10 +1858,10 @@
       "context": "M/CIO IT Infrastructure",
       "fy": "2024",
       "total_budgetary_resources": 260000000,
-      "unobligated_balance": 18200000,
-      "apportioned_unobligated": 14196000,
-      "unapportioned_unobligated": 2912000,
-      "expired_unobligated": 1092000,
+      "unobligated_balance": 28600000,
+      "apportioned_unobligated": 22308000,
+      "unapportioned_unobligated": 4576000,
+      "expired_unobligated": 1716000,
       "status": "Active"
     },
     {
@@ -1872,10 +1872,10 @@
       "context": "M/CIO IT Infrastructure",
       "fy": "2025",
       "total_budgetary_resources": 269100000,
-      "unobligated_balance": 40365000,
-      "apportioned_unobligated": 31484700,
-      "unapportioned_unobligated": 6458400,
-      "expired_unobligated": 2421900,
+      "unobligated_balance": 18837000,
+      "apportioned_unobligated": 14692860,
+      "unapportioned_unobligated": 3013920,
+      "expired_unobligated": 1130220,
       "status": "Active"
     },
     {
@@ -1886,10 +1886,10 @@
       "context": "M/CIO IT Infrastructure",
       "fy": "2026",
       "total_budgetary_resources": 278200000,
-      "unobligated_balance": 41730000,
-      "apportioned_unobligated": 32549400,
-      "unapportioned_unobligated": 6676800,
-      "expired_unobligated": 2503800,
+      "unobligated_balance": 22256000,
+      "apportioned_unobligated": 17359680,
+      "unapportioned_unobligated": 3560960,
+      "expired_unobligated": 1335360,
       "status": "Active"
     },
     {
@@ -1900,10 +1900,10 @@
       "context": "M/CIO IT Infrastructure",
       "fy": "2027",
       "total_budgetary_resources": 287300000,
-      "unobligated_balance": 31603000,
-      "apportioned_unobligated": 24650340,
-      "unapportioned_unobligated": 5056480,
-      "expired_unobligated": 1896180,
+      "unobligated_balance": 25857000,
+      "apportioned_unobligated": 20168460,
+      "unapportioned_unobligated": 4137120,
+      "expired_unobligated": 1551420,
       "status": "Active"
     },
     {
@@ -1928,10 +1928,10 @@
       "context": "Bureau for Europe and Eurasia",
       "fy": "2025",
       "total_budgetary_resources": 900449999,
-      "unobligated_balance": 117058499,
-      "apportioned_unobligated": 91305629,
-      "unapportioned_unobligated": 18729359,
-      "expired_unobligated": 7023511,
+      "unobligated_balance": 126062999,
+      "apportioned_unobligated": 98329139,
+      "unapportioned_unobligated": 20170079,
+      "expired_unobligated": 7563781,
       "status": "Active"
     },
     {
@@ -1942,10 +1942,10 @@
       "context": "Bureau for Europe and Eurasia",
       "fy": "2026",
       "total_budgetary_resources": 930900000,
-      "unobligated_balance": 121017000,
-      "apportioned_unobligated": 94393260,
-      "unapportioned_unobligated": 19362720,
-      "expired_unobligated": 7261020,
+      "unobligated_balance": 102399000,
+      "apportioned_unobligated": 79871220,
+      "unapportioned_unobligated": 16383840,
+      "expired_unobligated": 6143940,
       "status": "Active"
     },
     {
@@ -1956,10 +1956,10 @@
       "context": "Bureau for Europe and Eurasia",
       "fy": "2027",
       "total_budgetary_resources": 961350000,
-      "unobligated_balance": 105748500,
-      "apportioned_unobligated": 82483830,
-      "unapportioned_unobligated": 16919760,
-      "expired_unobligated": 6344910,
+      "unobligated_balance": 86521500,
+      "apportioned_unobligated": 67486770,
+      "unapportioned_unobligated": 13843440,
+      "expired_unobligated": 5191290,
       "status": "Active"
     },
     {
@@ -1984,10 +1984,10 @@
       "context": "Sub-account Tracking",
       "fy": "2025",
       "total_budgetary_resources": 67275000,
-      "unobligated_balance": 9418500,
-      "apportioned_unobligated": 7346430,
-      "unapportioned_unobligated": 1506960,
-      "expired_unobligated": 565110,
+      "unobligated_balance": 8073000,
+      "apportioned_unobligated": 6296940,
+      "unapportioned_unobligated": 1291680,
+      "expired_unobligated": 484380,
       "status": "Active"
     },
     {
@@ -1998,10 +1998,10 @@
       "context": "Sub-account Tracking",
       "fy": "2026",
       "total_budgetary_resources": 69550000,
-      "unobligated_balance": 8346000,
-      "apportioned_unobligated": 6509880,
-      "unapportioned_unobligated": 1335360,
-      "expired_unobligated": 500760,
+      "unobligated_balance": 7650500,
+      "apportioned_unobligated": 5967390,
+      "unapportioned_unobligated": 1224080,
+      "expired_unobligated": 459030,
       "status": "Active"
     },
     {
@@ -2012,10 +2012,10 @@
       "context": "Sub-account Tracking",
       "fy": "2027",
       "total_budgetary_resources": 71825000,
-      "unobligated_balance": 10055500,
-      "apportioned_unobligated": 7843290,
-      "unapportioned_unobligated": 1608880,
-      "expired_unobligated": 603330,
+      "unobligated_balance": 7900750,
+      "apportioned_unobligated": 6162585,
+      "unapportioned_unobligated": 1264120,
+      "expired_unobligated": 474045,
       "status": "Active"
     },
     {
@@ -2026,10 +2026,10 @@
       "context": "M Bureau IT & Shared Services",
       "fy": "2024",
       "total_budgetary_resources": 140000000,
-      "unobligated_balance": 14000000,
-      "apportioned_unobligated": 10920000,
-      "unapportioned_unobligated": 2240000,
-      "expired_unobligated": 840000,
+      "unobligated_balance": 15400000,
+      "apportioned_unobligated": 12012000,
+      "unapportioned_unobligated": 2464000,
+      "expired_unobligated": 924000,
       "status": "Active"
     },
     {
@@ -2040,10 +2040,10 @@
       "context": "M Bureau IT & Shared Services",
       "fy": "2025",
       "total_budgetary_resources": 144900000,
-      "unobligated_balance": 23184000,
-      "apportioned_unobligated": 18083520,
-      "unapportioned_unobligated": 3709440,
-      "expired_unobligated": 1391040,
+      "unobligated_balance": 17388000,
+      "apportioned_unobligated": 13562640,
+      "unapportioned_unobligated": 2782080,
+      "expired_unobligated": 1043280,
       "status": "Active"
     },
     {
@@ -2054,10 +2054,10 @@
       "context": "M Bureau IT & Shared Services",
       "fy": "2026",
       "total_budgetary_resources": 149800000,
-      "unobligated_balance": 11984000,
-      "apportioned_unobligated": 9347520,
-      "unapportioned_unobligated": 1917440,
-      "expired_unobligated": 719040,
+      "unobligated_balance": 16478000,
+      "apportioned_unobligated": 12852840,
+      "unapportioned_unobligated": 2636480,
+      "expired_unobligated": 988680,
       "status": "Active"
     },
     {
@@ -2068,10 +2068,10 @@
       "context": "M Bureau IT & Shared Services",
       "fy": "2027",
       "total_budgetary_resources": 154700000,
-      "unobligated_balance": 15470000,
-      "apportioned_unobligated": 12066600,
-      "unapportioned_unobligated": 2475200,
-      "expired_unobligated": 928200,
+      "unobligated_balance": 24752000,
+      "apportioned_unobligated": 19306560,
+      "unapportioned_unobligated": 3960320,
+      "expired_unobligated": 1485120,
       "status": "Active"
     },
     {
@@ -2082,10 +2082,10 @@
       "context": "Core Operating Budget",
       "fy": "2024",
       "total_budgetary_resources": 1680000000,
-      "unobligated_balance": 168000000,
-      "apportioned_unobligated": 131040000,
-      "unapportioned_unobligated": 26880000,
-      "expired_unobligated": 10080000,
+      "unobligated_balance": 151200000,
+      "apportioned_unobligated": 117936000,
+      "unapportioned_unobligated": 24192000,
+      "expired_unobligated": 9072000,
       "status": "Active"
     },
     {
@@ -2096,10 +2096,10 @@
       "context": "Core Operating Budget",
       "fy": "2025",
       "total_budgetary_resources": 1738799999,
-      "unobligated_balance": 278207999,
-      "apportioned_unobligated": 217002239,
-      "unapportioned_unobligated": 44513279,
-      "expired_unobligated": 16692481,
+      "unobligated_balance": 156491999,
+      "apportioned_unobligated": 122063759,
+      "unapportioned_unobligated": 25038719,
+      "expired_unobligated": 9389521,
       "status": "Active"
     },
     {
@@ -2110,10 +2110,10 @@
       "context": "Core Operating Budget",
       "fy": "2026",
       "total_budgetary_resources": 1797600000,
-      "unobligated_balance": 125832000,
-      "apportioned_unobligated": 98148960,
-      "unapportioned_unobligated": 20133120,
-      "expired_unobligated": 7549920,
+      "unobligated_balance": 287616000,
+      "apportioned_unobligated": 224340480,
+      "unapportioned_unobligated": 46018560,
+      "expired_unobligated": 17256960,
       "status": "Active"
     },
     {
@@ -2124,10 +2124,10 @@
       "context": "Core Operating Budget",
       "fy": "2027",
       "total_budgetary_resources": 1856400000,
-      "unobligated_balance": 297024000,
-      "apportioned_unobligated": 231678720,
-      "unapportioned_unobligated": 47523840,
-      "expired_unobligated": 17821440,
+      "unobligated_balance": 185640000,
+      "apportioned_unobligated": 144799200,
+      "unapportioned_unobligated": 29702400,
+      "expired_unobligated": 11138400,
       "status": "Active"
     },
     {
@@ -2138,10 +2138,10 @@
       "context": "Retirement Trust Account",
       "fy": "2024",
       "total_budgetary_resources": 155000000,
-      "unobligated_balance": 12400000,
-      "apportioned_unobligated": 9672000,
-      "unapportioned_unobligated": 1984000,
-      "expired_unobligated": 744000,
+      "unobligated_balance": 24800000,
+      "apportioned_unobligated": 19344000,
+      "unapportioned_unobligated": 3968000,
+      "expired_unobligated": 1488000,
       "status": "Active"
     },
     {
@@ -2152,10 +2152,10 @@
       "context": "Retirement Trust Account",
       "fy": "2025",
       "total_budgetary_resources": 160425000,
-      "unobligated_balance": 22459500,
-      "apportioned_unobligated": 17518410,
-      "unapportioned_unobligated": 3593520,
-      "expired_unobligated": 1347570,
+      "unobligated_balance": 25668000,
+      "apportioned_unobligated": 20021040,
+      "unapportioned_unobligated": 4106880,
+      "expired_unobligated": 1540080,
       "status": "Active"
     },
     {
@@ -2166,10 +2166,10 @@
       "context": "Retirement Trust Account",
       "fy": "2026",
       "total_budgetary_resources": 165850000,
-      "unobligated_balance": 13268000,
-      "apportioned_unobligated": 10349040,
-      "unapportioned_unobligated": 2122880,
-      "expired_unobligated": 796080,
+      "unobligated_balance": 16585000,
+      "apportioned_unobligated": 12936300,
+      "unapportioned_unobligated": 2653600,
+      "expired_unobligated": 995100,
       "status": "Active"
     },
     {
@@ -2180,10 +2180,10 @@
       "context": "Retirement Trust Account",
       "fy": "2027",
       "total_budgetary_resources": 171275000,
-      "unobligated_balance": 13702000,
-      "apportioned_unobligated": 10687560,
-      "unapportioned_unobligated": 2192320,
-      "expired_unobligated": 822120,
+      "unobligated_balance": 27404000,
+      "apportioned_unobligated": 21375120,
+      "unapportioned_unobligated": 4384640,
+      "expired_unobligated": 1644240,
       "status": "Active"
     },
     {
@@ -2194,10 +2194,10 @@
       "context": "Independent Oversight",
       "fy": "2024",
       "total_budgetary_resources": 98000000,
-      "unobligated_balance": 7840000,
-      "apportioned_unobligated": 6115200,
-      "unapportioned_unobligated": 1254400,
-      "expired_unobligated": 470400,
+      "unobligated_balance": 6860000,
+      "apportioned_unobligated": 5350800,
+      "unapportioned_unobligated": 1097600,
+      "expired_unobligated": 411600,
       "status": "Active"
     },
     {
@@ -2208,10 +2208,10 @@
       "context": "Independent Oversight",
       "fy": "2025",
       "total_budgetary_resources": 101429999,
-      "unobligated_balance": 9128699,
-      "apportioned_unobligated": 7120385,
-      "unapportioned_unobligated": 1460591,
-      "expired_unobligated": 547723,
+      "unobligated_balance": 13185899,
+      "apportioned_unobligated": 10285001,
+      "unapportioned_unobligated": 2109743,
+      "expired_unobligated": 791155,
       "status": "Active"
     },
     {
@@ -2222,10 +2222,10 @@
       "context": "Independent Oversight",
       "fy": "2026",
       "total_budgetary_resources": 104860000,
-      "unobligated_balance": 7340200,
-      "apportioned_unobligated": 5725356,
-      "unapportioned_unobligated": 1174432,
-      "expired_unobligated": 440412,
+      "unobligated_balance": 16777600,
+      "apportioned_unobligated": 13086528,
+      "unapportioned_unobligated": 2684416,
+      "expired_unobligated": 1006656,
       "status": "Active"
     },
     {
@@ -2236,10 +2236,10 @@
       "context": "Independent Oversight",
       "fy": "2027",
       "total_budgetary_resources": 108290000,
-      "unobligated_balance": 10829000,
-      "apportioned_unobligated": 8446620,
-      "unapportioned_unobligated": 1732640,
-      "expired_unobligated": 649740,
+      "unobligated_balance": 15160600,
+      "apportioned_unobligated": 11825268,
+      "unapportioned_unobligated": 2425696,
+      "expired_unobligated": 909636,
       "status": "Active"
     },
     {
@@ -2264,10 +2264,10 @@
       "context": "Bureau for CPS",
       "fy": "2025",
       "total_budgetary_resources": 62099999,
-      "unobligated_balance": 8072999,
-      "apportioned_unobligated": 6296939,
-      "unapportioned_unobligated": 1291679,
-      "expired_unobligated": 484381,
+      "unobligated_balance": 5588999,
+      "apportioned_unobligated": 4359419,
+      "unapportioned_unobligated": 894239,
+      "expired_unobligated": 335341,
       "status": "Active"
     },
     {
@@ -2278,10 +2278,10 @@
       "context": "Bureau for CPS",
       "fy": "2026",
       "total_budgetary_resources": 64200000,
-      "unobligated_balance": 8988000,
-      "apportioned_unobligated": 7010640,
-      "unapportioned_unobligated": 1438080,
-      "expired_unobligated": 539280,
+      "unobligated_balance": 10272000,
+      "apportioned_unobligated": 8012160,
+      "unapportioned_unobligated": 1643520,
+      "expired_unobligated": 616320,
       "status": "Active"
     },
     {
@@ -2292,10 +2292,10 @@
       "context": "Bureau for CPS",
       "fy": "2027",
       "total_budgetary_resources": 66300000,
-      "unobligated_balance": 10608000,
-      "apportioned_unobligated": 8274240,
-      "unapportioned_unobligated": 1697280,
-      "expired_unobligated": 636480,
+      "unobligated_balance": 9945000,
+      "apportioned_unobligated": 7757100,
+      "unapportioned_unobligated": 1591200,
+      "expired_unobligated": 596700,
       "status": "Active"
     },
     {
@@ -2306,10 +2306,10 @@
       "context": "Sustainable Development Programs",
       "fy": "2024",
       "total_budgetary_resources": 4350000000,
-      "unobligated_balance": 696000000,
-      "apportioned_unobligated": 542880000,
-      "unapportioned_unobligated": 111360000,
-      "expired_unobligated": 41760000,
+      "unobligated_balance": 609000000,
+      "apportioned_unobligated": 475020000,
+      "unapportioned_unobligated": 97440000,
+      "expired_unobligated": 36540000,
       "status": "Active"
     },
     {
@@ -2320,10 +2320,10 @@
       "context": "Sustainable Development Programs",
       "fy": "2025",
       "total_budgetary_resources": 4502250000,
-      "unobligated_balance": 495247500,
-      "apportioned_unobligated": 386293050,
-      "unapportioned_unobligated": 79239600,
-      "expired_unobligated": 29714850,
+      "unobligated_balance": 675337500,
+      "apportioned_unobligated": 526763250,
+      "unapportioned_unobligated": 108054000,
+      "expired_unobligated": 40520250,
       "status": "Active"
     },
     {
@@ -2334,10 +2334,10 @@
       "context": "Sustainable Development Programs",
       "fy": "2026",
       "total_budgetary_resources": 4654500000,
-      "unobligated_balance": 558540000,
-      "apportioned_unobligated": 435661200,
-      "unapportioned_unobligated": 89366400,
-      "expired_unobligated": 33512400,
+      "unobligated_balance": 744720000,
+      "apportioned_unobligated": 580881600,
+      "unapportioned_unobligated": 119155200,
+      "expired_unobligated": 44683200,
       "status": "Active"
     },
     {
@@ -2348,10 +2348,10 @@
       "context": "Sustainable Development Programs",
       "fy": "2027",
       "total_budgetary_resources": 4806750000,
-      "unobligated_balance": 769080000,
-      "apportioned_unobligated": 599882400,
-      "unapportioned_unobligated": 123052800,
-      "expired_unobligated": 46144800,
+      "unobligated_balance": 672945000,
+      "apportioned_unobligated": 524897100,
+      "unapportioned_unobligated": 107671200,
+      "expired_unobligated": 40376700,
       "status": "Active"
     },
     {
@@ -2362,10 +2362,10 @@
       "context": "Office of Transition Initiatives",
       "fy": "2024",
       "total_budgetary_resources": 105000000,
-      "unobligated_balance": 13650000,
-      "apportioned_unobligated": 10647000,
-      "unapportioned_unobligated": 2184000,
-      "expired_unobligated": 819000,
+      "unobligated_balance": 10500000,
+      "apportioned_unobligated": 8190000,
+      "unapportioned_unobligated": 1680000,
+      "expired_unobligated": 630000,
       "status": "Active"
     },
     {
@@ -2376,10 +2376,10 @@
       "context": "Office of Transition Initiatives",
       "fy": "2025",
       "total_budgetary_resources": 108674999,
-      "unobligated_balance": 15214499,
-      "apportioned_unobligated": 11867309,
-      "unapportioned_unobligated": 2434319,
-      "expired_unobligated": 912871,
+      "unobligated_balance": 11954249,
+      "apportioned_unobligated": 9324314,
+      "unapportioned_unobligated": 1912679,
+      "expired_unobligated": 717256,
       "status": "Active"
     },
     {
@@ -2390,10 +2390,10 @@
       "context": "Office of Transition Initiatives",
       "fy": "2026",
       "total_budgetary_resources": 112350000,
-      "unobligated_balance": 10111500,
-      "apportioned_unobligated": 7886970,
-      "unapportioned_unobligated": 1617840,
-      "expired_unobligated": 606690,
+      "unobligated_balance": 8988000,
+      "apportioned_unobligated": 7010640,
+      "unapportioned_unobligated": 1438080,
+      "expired_unobligated": 539280,
       "status": "Active"
     },
     {
@@ -2404,10 +2404,10 @@
       "context": "Office of Transition Initiatives",
       "fy": "2027",
       "total_budgetary_resources": 116025000,
-      "unobligated_balance": 11602500,
-      "apportioned_unobligated": 9049950,
-      "unapportioned_unobligated": 1856400,
-      "expired_unobligated": 696150,
+      "unobligated_balance": 13923000,
+      "apportioned_unobligated": 10859940,
+      "unapportioned_unobligated": 2227680,
+      "expired_unobligated": 835380,
       "status": "Active"
     },
     {
@@ -2418,10 +2418,10 @@
       "context": "Bureau for Global Health",
       "fy": "2024",
       "total_budgetary_resources": 3950000000,
-      "unobligated_balance": 316000000,
-      "apportioned_unobligated": 246480000,
-      "unapportioned_unobligated": 50560000,
-      "expired_unobligated": 18960000,
+      "unobligated_balance": 395000000,
+      "apportioned_unobligated": 308100000,
+      "unapportioned_unobligated": 63200000,
+      "expired_unobligated": 23700000,
       "status": "Active"
     },
     {
@@ -2446,10 +2446,10 @@
       "context": "Bureau for Global Health",
       "fy": "2026",
       "total_budgetary_resources": 4226500000,
-      "unobligated_balance": 295855000,
-      "apportioned_unobligated": 230766900,
-      "unapportioned_unobligated": 47336800,
-      "expired_unobligated": 17751300,
+      "unobligated_balance": 464915000,
+      "apportioned_unobligated": 362633700,
+      "unapportioned_unobligated": 74386400,
+      "expired_unobligated": 27894900,
       "status": "Active"
     },
     {
@@ -2460,10 +2460,10 @@
       "context": "Bureau for Global Health",
       "fy": "2027",
       "total_budgetary_resources": 4364750000,
-      "unobligated_balance": 305532500,
-      "apportioned_unobligated": 238315350,
-      "unapportioned_unobligated": 48885200,
-      "expired_unobligated": 18331950,
+      "unobligated_balance": 480122500,
+      "apportioned_unobligated": 374495550,
+      "unapportioned_unobligated": 76819600,
+      "expired_unobligated": 28807350,
       "status": "Active"
     },
     {
@@ -2474,10 +2474,10 @@
       "context": "Bureau for Humanitarian Assistance",
       "fy": "2024",
       "total_budgetary_resources": 4520000000,
-      "unobligated_balance": 678000000,
-      "apportioned_unobligated": 528840000,
-      "unapportioned_unobligated": 108480000,
-      "expired_unobligated": 40680000,
+      "unobligated_balance": 316400000,
+      "apportioned_unobligated": 246792000,
+      "unapportioned_unobligated": 50624000,
+      "expired_unobligated": 18984000,
       "status": "Active"
     },
     {
@@ -2488,10 +2488,10 @@
       "context": "Bureau for Humanitarian Assistance",
       "fy": "2025",
       "total_budgetary_resources": 4678200000,
-      "unobligated_balance": 654948000,
-      "apportioned_unobligated": 510859440,
-      "unapportioned_unobligated": 104791680,
-      "expired_unobligated": 39296880,
+      "unobligated_balance": 374256000,
+      "apportioned_unobligated": 291919680,
+      "unapportioned_unobligated": 59880960,
+      "expired_unobligated": 22455360,
       "status": "Active"
     },
     {
@@ -2502,10 +2502,10 @@
       "context": "Bureau for Humanitarian Assistance",
       "fy": "2026",
       "total_budgetary_resources": 4836400000,
-      "unobligated_balance": 725460000,
-      "apportioned_unobligated": 565858800,
-      "unapportioned_unobligated": 116073600,
-      "expired_unobligated": 43527600,
+      "unobligated_balance": 580368000,
+      "apportioned_unobligated": 452687040,
+      "unapportioned_unobligated": 92858880,
+      "expired_unobligated": 34822080,
       "status": "Active"
     },
     {
@@ -2516,10 +2516,10 @@
       "context": "Bureau for Humanitarian Assistance",
       "fy": "2027",
       "total_budgetary_resources": 4994600000,
-      "unobligated_balance": 349622000,
-      "apportioned_unobligated": 272705160,
-      "unapportioned_unobligated": 55939520,
-      "expired_unobligated": 20977320,
+      "unobligated_balance": 399568000,
+      "apportioned_unobligated": 311663040,
+      "unapportioned_unobligated": 63930880,
+      "expired_unobligated": 23974080,
       "status": "Active"
     },
     {
@@ -2530,10 +2530,10 @@
       "context": "Sub-account Tracking",
       "fy": "2024",
       "total_budgetary_resources": 90000000,
-      "unobligated_balance": 9900000,
-      "apportioned_unobligated": 7722000,
-      "unapportioned_unobligated": 1584000,
-      "expired_unobligated": 594000,
+      "unobligated_balance": 7200000,
+      "apportioned_unobligated": 5616000,
+      "unapportioned_unobligated": 1152000,
+      "expired_unobligated": 432000,
       "status": "Active"
     },
     {
@@ -2544,10 +2544,10 @@
       "context": "Sub-account Tracking",
       "fy": "2025",
       "total_budgetary_resources": 93150000,
-      "unobligated_balance": 13972500,
-      "apportioned_unobligated": 10898550,
-      "unapportioned_unobligated": 2235600,
-      "expired_unobligated": 838350,
+      "unobligated_balance": 14904000,
+      "apportioned_unobligated": 11625120,
+      "unapportioned_unobligated": 2384640,
+      "expired_unobligated": 894240,
       "status": "Active"
     },
     {
@@ -2558,10 +2558,10 @@
       "context": "Sub-account Tracking",
       "fy": "2026",
       "total_budgetary_resources": 96300000,
-      "unobligated_balance": 6741000,
-      "apportioned_unobligated": 5257980,
-      "unapportioned_unobligated": 1078560,
-      "expired_unobligated": 404460,
+      "unobligated_balance": 11556000,
+      "apportioned_unobligated": 9013680,
+      "unapportioned_unobligated": 1848960,
+      "expired_unobligated": 693360,
       "status": "Active"
     },
     {
@@ -2572,10 +2572,10 @@
       "context": "Sub-account Tracking",
       "fy": "2027",
       "total_budgetary_resources": 99450000,
-      "unobligated_balance": 12928500,
-      "apportioned_unobligated": 10084230,
-      "unapportioned_unobligated": 2068560,
-      "expired_unobligated": 775710,
+      "unobligated_balance": 11934000,
+      "apportioned_unobligated": 9308520,
+      "unapportioned_unobligated": 1909440,
+      "expired_unobligated": 716040,
       "status": "Active"
     },
     {
@@ -2600,10 +2600,10 @@
       "context": "Strategic Economic Aid",
       "fy": "2025",
       "total_budgetary_resources": 3746699999,
-      "unobligated_balance": 524537999,
-      "apportioned_unobligated": 409139639,
-      "unapportioned_unobligated": 83926079,
-      "expired_unobligated": 31472281,
+      "unobligated_balance": 299735999,
+      "apportioned_unobligated": 233794079,
+      "unapportioned_unobligated": 47957759,
+      "expired_unobligated": 17984161,
       "status": "Active"
     },
     {
@@ -2614,10 +2614,10 @@
       "context": "Strategic Economic Aid",
       "fy": "2026",
       "total_budgetary_resources": 3873400000,
-      "unobligated_balance": 581010000,
-      "apportioned_unobligated": 453187800,
-      "unapportioned_unobligated": 92961600,
-      "expired_unobligated": 34860600,
+      "unobligated_balance": 309872000,
+      "apportioned_unobligated": 241700160,
+      "unapportioned_unobligated": 49579520,
+      "expired_unobligated": 18592320,
       "status": "Active"
     },
     {
@@ -2628,10 +2628,10 @@
       "context": "Strategic Economic Aid",
       "fy": "2027",
       "total_budgetary_resources": 4000100000,
-      "unobligated_balance": 360009000,
-      "apportioned_unobligated": 280807020,
-      "unapportioned_unobligated": 57601440,
-      "expired_unobligated": 21600540,
+      "unobligated_balance": 560014000,
+      "apportioned_unobligated": 436810920,
+      "unapportioned_unobligated": 89602240,
+      "expired_unobligated": 33600840,
       "status": "Active"
     },
     {
@@ -2642,10 +2642,10 @@
       "context": "Legacy Credit Account",
       "fy": "2024",
       "total_budgetary_resources": 40000000,
-      "unobligated_balance": 2800000,
-      "apportioned_unobligated": 2184000,
-      "unapportioned_unobligated": 448000,
-      "expired_unobligated": 168000,
+      "unobligated_balance": 5600000,
+      "apportioned_unobligated": 4368000,
+      "unapportioned_unobligated": 896000,
+      "expired_unobligated": 336000,
       "status": "Active"
     },
     {
@@ -2656,10 +2656,10 @@
       "context": "Legacy Credit Account",
       "fy": "2025",
       "total_budgetary_resources": 41400000,
-      "unobligated_balance": 5382000,
-      "apportioned_unobligated": 4197960,
-      "unapportioned_unobligated": 861120,
-      "expired_unobligated": 322920,
+      "unobligated_balance": 3312000,
+      "apportioned_unobligated": 2583360,
+      "unapportioned_unobligated": 529920,
+      "expired_unobligated": 198720,
       "status": "Active"
     },
     {
@@ -2670,10 +2670,10 @@
       "context": "Legacy Credit Account",
       "fy": "2026",
       "total_budgetary_resources": 42800000,
-      "unobligated_balance": 5992000,
-      "apportioned_unobligated": 4673760,
-      "unapportioned_unobligated": 958720,
-      "expired_unobligated": 359520,
+      "unobligated_balance": 4708000,
+      "apportioned_unobligated": 3672240,
+      "unapportioned_unobligated": 753280,
+      "expired_unobligated": 282480,
       "status": "Active"
     },
     {
@@ -2684,10 +2684,10 @@
       "context": "Legacy Credit Account",
       "fy": "2027",
       "total_budgetary_resources": 44200000,
-      "unobligated_balance": 5746000,
-      "apportioned_unobligated": 4481880,
-      "unapportioned_unobligated": 919360,
-      "expired_unobligated": 344760,
+      "unobligated_balance": 7072000,
+      "apportioned_unobligated": 5516160,
+      "unapportioned_unobligated": 1131520,
+      "expired_unobligated": 424320,
       "status": "Active"
     },
     {
@@ -2698,10 +2698,10 @@
       "context": "Legacy Credit Guarantee",
       "fy": "2024",
       "total_budgetary_resources": 75000000,
-      "unobligated_balance": 11250000,
-      "apportioned_unobligated": 8775000,
-      "unapportioned_unobligated": 1800000,
-      "expired_unobligated": 675000,
+      "unobligated_balance": 9000000,
+      "apportioned_unobligated": 7020000,
+      "unapportioned_unobligated": 1440000,
+      "expired_unobligated": 540000,
       "status": "Active"
     },
     {
@@ -2712,10 +2712,10 @@
       "context": "Legacy Credit Guarantee",
       "fy": "2025",
       "total_budgetary_resources": 77625000,
-      "unobligated_balance": 12420000,
-      "apportioned_unobligated": 9687600,
-      "unapportioned_unobligated": 1987200,
-      "expired_unobligated": 745200,
+      "unobligated_balance": 8538750,
+      "apportioned_unobligated": 6660225,
+      "unapportioned_unobligated": 1366200,
+      "expired_unobligated": 512325,
       "status": "Active"
     },
     {
@@ -2726,10 +2726,10 @@
       "context": "Legacy Credit Guarantee",
       "fy": "2026",
       "total_budgetary_resources": 80250000,
-      "unobligated_balance": 6420000,
-      "apportioned_unobligated": 5007600,
-      "unapportioned_unobligated": 1027200,
-      "expired_unobligated": 385200,
+      "unobligated_balance": 11235000,
+      "apportioned_unobligated": 8763300,
+      "unapportioned_unobligated": 1797600,
+      "expired_unobligated": 674100,
       "status": "Active"
     },
     {
@@ -2740,10 +2740,10 @@
       "context": "Legacy Credit Guarantee",
       "fy": "2027",
       "total_budgetary_resources": 82875000,
-      "unobligated_balance": 13260000,
-      "apportioned_unobligated": 10342800,
-      "unapportioned_unobligated": 2121600,
-      "expired_unobligated": 795600,
+      "unobligated_balance": 11602500,
+      "apportioned_unobligated": 9049950,
+      "unapportioned_unobligated": 1856400,
+      "expired_unobligated": 696150,
       "status": "Active"
     },
     {
@@ -2754,10 +2754,10 @@
       "context": "Peace Corps",
       "fy": "2024",
       "total_budgetary_resources": 430000000,
-      "unobligated_balance": 51600000,
-      "apportioned_unobligated": 40248000,
-      "unapportioned_unobligated": 8256000,
-      "expired_unobligated": 3096000,
+      "unobligated_balance": 38700000,
+      "apportioned_unobligated": 30186000,
+      "unapportioned_unobligated": 6192000,
+      "expired_unobligated": 2322000,
       "status": "Active"
     },
     {
@@ -2768,10 +2768,10 @@
       "context": "Peace Corps",
       "fy": "2025",
       "total_budgetary_resources": 445049999,
-      "unobligated_balance": 31153499,
-      "apportioned_unobligated": 24299729,
-      "unapportioned_unobligated": 4984559,
-      "expired_unobligated": 1869211,
+      "unobligated_balance": 48955499,
+      "apportioned_unobligated": 38185289,
+      "unapportioned_unobligated": 7832879,
+      "expired_unobligated": 2937331,
       "status": "Active"
     },
     {
@@ -2782,10 +2782,10 @@
       "context": "Peace Corps",
       "fy": "2026",
       "total_budgetary_resources": 460100000,
-      "unobligated_balance": 36808000,
-      "apportioned_unobligated": 28710240,
-      "unapportioned_unobligated": 5889280,
-      "expired_unobligated": 2208480,
+      "unobligated_balance": 41409000,
+      "apportioned_unobligated": 32299020,
+      "unapportioned_unobligated": 6625440,
+      "expired_unobligated": 2484540,
       "status": "Active"
     },
     {
@@ -2796,10 +2796,10 @@
       "context": "Peace Corps",
       "fy": "2027",
       "total_budgetary_resources": 475150000,
-      "unobligated_balance": 38012000,
-      "apportioned_unobligated": 29649360,
-      "unapportioned_unobligated": 6081920,
-      "expired_unobligated": 2280720,
+      "unobligated_balance": 52266500,
+      "apportioned_unobligated": 40767870,
+      "unapportioned_unobligated": 8362640,
+      "expired_unobligated": 3135990,
       "status": "Active"
     },
     {
@@ -2810,10 +2810,10 @@
       "context": "MCC",
       "fy": "2024",
       "total_budgetary_resources": 930000000,
-      "unobligated_balance": 120900000,
-      "apportioned_unobligated": 94302000,
-      "unapportioned_unobligated": 19344000,
-      "expired_unobligated": 7254000,
+      "unobligated_balance": 102300000,
+      "apportioned_unobligated": 79794000,
+      "unapportioned_unobligated": 16368000,
+      "expired_unobligated": 6138000,
       "status": "Active"
     },
     {
@@ -2824,10 +2824,10 @@
       "context": "MCC",
       "fy": "2025",
       "total_budgetary_resources": 962549999,
-      "unobligated_balance": 115505999,
-      "apportioned_unobligated": 90094679,
-      "unapportioned_unobligated": 18480959,
-      "expired_unobligated": 6930361,
+      "unobligated_balance": 134756999,
+      "apportioned_unobligated": 105110459,
+      "unapportioned_unobligated": 21561119,
+      "expired_unobligated": 8085421,
       "status": "Active"
     },
     {
@@ -2838,10 +2838,10 @@
       "context": "MCC",
       "fy": "2026",
       "total_budgetary_resources": 995100000,
-      "unobligated_balance": 109461000,
-      "apportioned_unobligated": 85379580,
-      "unapportioned_unobligated": 17513760,
-      "expired_unobligated": 6567660,
+      "unobligated_balance": 89559000,
+      "apportioned_unobligated": 69856020,
+      "unapportioned_unobligated": 14329440,
+      "expired_unobligated": 5373540,
       "status": "Active"
     },
     {
@@ -2852,10 +2852,10 @@
       "context": "MCC",
       "fy": "2027",
       "total_budgetary_resources": 1027650000,
-      "unobligated_balance": 164424000,
-      "apportioned_unobligated": 128250720,
-      "unapportioned_unobligated": 26307840,
-      "expired_unobligated": 9865440,
+      "unobligated_balance": 133594500,
+      "apportioned_unobligated": 104203710,
+      "unapportioned_unobligated": 21375120,
+      "expired_unobligated": 8015670,
       "status": "Active"
     }
   ]
